@@ -42,7 +42,7 @@ jobs:
         shell: bash
         run: |
           pip install --upgrade pip
-          pip install -r dev-requirements
+          pip install -r dev-requirements.txt
 
       - name: 🔧 Build HTML
         run: |
