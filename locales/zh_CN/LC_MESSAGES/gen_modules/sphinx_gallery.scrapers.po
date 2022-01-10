@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.scrapers.rst:5
+msgid "sphinx_gallery.scrapers"
+msgstr ""
+
+#: of sphinx_gallery.scrapers:2
+msgid "Scrapers for embedding images"
+msgstr ""
+
+#: of sphinx_gallery.scrapers:4
+msgid "Collect images that have been produced by code blocks."
+msgstr ""
+
+#: of sphinx_gallery.scrapers:6
+msgid ""
+"The only scrapers we support are Matplotlib and Mayavi, others should "
+"live in modules that will support them (e.g., PyVista, Plotly).  Scraped "
+"images are injected as rst ``image-sg`` directives into the ``.rst`` file"
+" generated for each example script."
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.scrapers.rst:13
+msgid "Functions"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.clean_modules:1
+msgid "Remove, unload, or reset modules."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.clean_modules:3
+msgid ""
+"After a script is executed it can load a variety of settings that one "
+"does not want to influence in other examples in the gallery."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.ImagePathIterator
+#: sphinx_gallery.scrapers.clean_modules sphinx_gallery.scrapers.figure_rst
+#: sphinx_gallery.scrapers.matplotlib_scraper
+#: sphinx_gallery.scrapers.mayavi_scraper sphinx_gallery.scrapers.save_figures
+msgid "参数"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.clean_modules:6
+msgid "The gallery configuration."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.clean_modules:8
+msgid ""
+"The example being run. Will be None when this is called entering a "
+"directory of examples to be built."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.clean_modules:11
+msgid ""
+"Whether this module is run before or after examples.  This parameter is "
+"only forwarded when the callables accept 3 parameters."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.clean_modules:11
+msgid "Whether this module is run before or after examples."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.clean_modules:13
+msgid "This parameter is only forwarded when the callables accept 3 parameters."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:1
+msgid "Generate RST for a list of image filenames."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:3
+msgid ""
+"Depending on whether we have one or more figures, we use a single rst "
+"call to 'image' or a horizontal list."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:6
+msgid "List of strings of the figures' absolute paths."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:8
+msgid "absolute path of Sphinx documentation sources"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:10
+msgid ""
+"Titles of figures, empty string if no titles found. Currently only "
+"supported for matplotlib figures, default = ''."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:13
+msgid ""
+"List of dictionaries containing absolute paths.  If empty, then srcset "
+"field is populated with the figure path. (see ``image_srcset`` "
+"configuration option).  Otherwise, each dict is of the form {0: "
+"/images/image.png, 2.0: /images/image_2_0x.png} where the key is the "
+"multiplication factor and the contents the path to the image created "
+"above."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst
+#: sphinx_gallery.scrapers.matplotlib_scraper
+#: sphinx_gallery.scrapers.mayavi_scraper sphinx_gallery.scrapers.save_figures
+msgid "返回"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:22
+msgid ""
+"* **images_rst** (*str*) -- rst code to embed the images in the document "
+"* The rst code will have a custom ``image-sg`` directive that allows * "
+"*multiple resolution images to be served e.g.* * **``** (*srcset: "
+"/plot_types/imgs/img_001.png,*) -- /plot_types/imgs/img_2_0x.png 2.0x``"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:22
+msgid "**images_rst** (*str*) -- rst code to embed the images in the document"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:23
+msgid "The rst code will have a custom ``image-sg`` directive that allows"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:24
+msgid "*multiple resolution images to be served e.g.*"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.figure_rst:25
+msgid ""
+"**``** (*srcset: /plot_types/imgs/img_001.png,*) -- "
+"/plot_types/imgs/img_2_0x.png 2.0x``"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.matplotlib_scraper:1
+msgid "Scrape Matplotlib images."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.matplotlib_scraper:3
+#: sphinx_gallery.scrapers.mayavi_scraper:3
+#: sphinx_gallery.scrapers.save_figures:3
+msgid "A tuple containing the (label, content, line_number) of the block."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.matplotlib_scraper:5
+#: sphinx_gallery.scrapers.mayavi_scraper:5
+#: sphinx_gallery.scrapers.save_figures:5
+msgid "Dict of block variables."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.matplotlib_scraper:7
+#: sphinx_gallery.scrapers.mayavi_scraper:7
+#: sphinx_gallery.scrapers.save_figures:7
+msgid "Contains the configuration of Sphinx-Gallery"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.matplotlib_scraper:9
+msgid ""
+"Additional keyword arguments to pass to "
+":meth:`~matplotlib.figure.Figure.savefig`, e.g. ``format='svg'``. The "
+"``format`` kwarg in particular is used to set the file extension of the "
+"output file (currently only 'png', 'jpg', and 'svg' are supported)."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.matplotlib_scraper:16
+#: sphinx_gallery.scrapers.mayavi_scraper:10
+msgid ""
+"**rst** -- The ReSTructuredText that will be rendered to HTML containing "
+"the images. This is often produced by :func:`figure_rst`."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.matplotlib_scraper
+#: sphinx_gallery.scrapers.mayavi_scraper sphinx_gallery.scrapers.save_figures
+msgid "返回类型"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.mayavi_scraper:1
+msgid "Scrape Mayavi images."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.save_figures:1
+msgid "Save all open figures of the example code-block."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.save_figures:10
+msgid "**images_rst** -- rst code to embed the images in the document."
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.scrapers.rst:58
+msgid "Classes"
+msgstr ""
+
+#: of sphinx_gallery.scrapers.ImagePathIterator:1
+msgid "Iterate over image paths for a given example."
+msgstr ""
+
+#: of sphinx_gallery.scrapers.ImagePathIterator:3
+msgid "The template image path."
+msgstr ""
+

@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.downloads.rst:5
+msgid "sphinx_gallery.downloads"
+msgstr ""
+
+#: of sphinx_gallery.downloads:2
+msgid "Utilities for downloadable items"
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.downloads.rst:13
+msgid "Functions"
+msgstr ""
+
+#: of sphinx_gallery.downloads.generate_zipfiles:1
+msgid ""
+"Collects all Python source files and Jupyter notebooks in gallery_dir and"
+" makes zipfiles of them"
+msgstr ""
+
+#: of sphinx_gallery.downloads.generate_zipfiles
+#: sphinx_gallery.downloads.list_downloadable_sources
+#: sphinx_gallery.downloads.python_zip
+msgid "参数"
+msgstr ""
+
+#: of sphinx_gallery.downloads.generate_zipfiles:4
+msgid "path of the gallery to collect downloadable sources"
+msgstr ""
+
+#: of sphinx_gallery.downloads.generate_zipfiles:6
+msgid "The build source directory. Needed to make the RST paths relative."
+msgstr ""
+
+#: of sphinx_gallery.downloads.generate_zipfiles
+#: sphinx_gallery.downloads.list_downloadable_sources
+#: sphinx_gallery.downloads.python_zip
+msgid "返回"
+msgstr ""
+
+#: of sphinx_gallery.downloads.generate_zipfiles:9
+msgid ""
+"**download_rst** -- RestructuredText to include download buttons to the "
+"generated files"
+msgstr ""
+
+#: of sphinx_gallery.downloads.generate_zipfiles
+#: sphinx_gallery.downloads.list_downloadable_sources
+#: sphinx_gallery.downloads.python_zip
+msgid "返回类型"
+msgstr ""
+
+#: of sphinx_gallery.downloads.list_downloadable_sources:1
+msgid "Returns a list of python source files is target_dir"
+msgstr ""
+
+#: of sphinx_gallery.downloads.list_downloadable_sources:3
+msgid "path to the directory where python source file are"
+msgstr ""
+
+#: of sphinx_gallery.downloads.list_downloadable_sources:6
+msgid "list of paths to all Python source files in `target_dir`"
+msgstr ""
+
+#: of sphinx_gallery.downloads.python_zip:1
+msgid "Stores all files in file_list into an zip file"
+msgstr ""
+
+#: of sphinx_gallery.downloads.python_zip:3
+msgid "Holds all the file names to be included in zip file"
+msgstr ""
+
+#: of sphinx_gallery.downloads.python_zip:5
+msgid "path to where the zipfile is stored"
+msgstr ""
+
+#: of sphinx_gallery.downloads.python_zip:7
+msgid ""
+"'.py' or '.ipynb' In order to deal with downloads of python sources and "
+"jupyter notebooks the file extension from files in file_list will be "
+"removed and replace with the value of this variable while generating the "
+"zip file"
+msgstr ""
+
+#: of sphinx_gallery.downloads.python_zip:13
+msgid ""
+"**zipname** -- zip file name, written as "
+"`target_dir_{python,jupyter}.zip` depending on the extension"
+msgstr ""
+

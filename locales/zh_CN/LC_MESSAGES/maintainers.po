@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../maintainers.rst:5
+msgid "Maintaining Sphinx Gallery"
+msgstr ""
+
+#: ../../maintainers.rst:7
+msgid "This document contains tips for maintenance."
+msgstr ""
+
+#: ../../maintainers.rst:14
+msgid "How to make a release"
+msgstr ""
+
+#: ../../maintainers.rst:19
+msgid "Check credentials and prerequisites"
+msgstr ""
+
+#: ../../maintainers.rst:21
+msgid ""
+"Sphinx Gallery is `hosted on the pypi repository "
+"<https://pypi.org/project/sphinx-gallery/>`_. To create a new release of "
+"Sphinx Gallery, you need to do these things: You should double-check a "
+"few things to make sure that you can create a new release for Sphinx "
+"Gallery."
+msgstr ""
+
+#: ../../maintainers.rst:26
+msgid ""
+"Ensure that you **registered an account** on `the PyPI index "
+"<https://pypi.org/account/register/>`_."
+msgstr ""
+
+#: ../../maintainers.rst:27
+msgid ""
+"Ensure you have **push access** to the `Sphinx Gallery pypi repository "
+"<https://pypi.org/project/sphinx-gallery/>`_. Ask one of the Sphinx "
+"Gallery core developers if you do not."
+msgstr ""
+
+#: ../../maintainers.rst:30
+msgid ""
+"Install the `GitHub Changelog Generator <https://github.com/github-"
+"changelog-generator/github-changelog-generator#installation>`_. This is a"
+" small tool written in Ruby to generate a markdown list of recent "
+"changes."
+msgstr ""
+
+#: ../../maintainers.rst:32
+msgid ""
+"Install `the twine package <https://twine.readthedocs.io/en/latest/>`_. "
+"This is a package that helps you bundle and push new Python package "
+"distributions to pip."
+msgstr ""
+
+#: ../../maintainers.rst:38
+msgid "Prepare for release"
+msgstr ""
+
+#: ../../maintainers.rst:39
+msgid "Update ``CHANGES.rst``"
+msgstr ""
+
+#: ../../maintainers.rst:41
+#, python-format
+msgid ""
+"Use `github_changelog_generator <https://github.com/skywinder/github-"
+"changelog-generator#installation>`_ to gather all merged pull requests "
+"and closed issues during the development cycle. You will likely need to "
+"`generate a Github token "
+"<https://github.com/settings/tokens/new?description=GitHub%20Changelog%20Generator%20token>`_"
+" as Github only allows 50 unauthenticated requests per hour. In the "
+"command below ``<version>`` is the current (not development) version of "
+"the package, e.g., ``0.6.0``. We do this because our failing discipline "
+"of writing in the CHANGES.rst all relevant changes, this helps our "
+"memory. It is a good idea to add appropriate labels (e.g., 'BUG') to "
+"issues and pull requests so they are categorized correctly in the "
+"CHANGES.rst generated. ::"
+msgstr ""
+
+#: ../../maintainers.rst:55
+msgid ""
+"Edit CHANGELOG.md to look reasonable (it will be used later). It's a good"
+" idea to add labels to issues and pull requests so "
+"`github_changelog_generator` can correctly categorize them in in the "
+"CHANGES.rst file generated."
+msgstr ""
+
+#: ../../maintainers.rst:60
+msgid ""
+"Propagate the relevant changes to `CHANGES.rst <https://github.com"
+"/sphinx-gallery/sphinx-gallery/blob/master/CHANGES.rst>`_. You can easily"
+" convert it RST with pandoc::"
+msgstr ""
+
+#: ../../maintainers.rst:65
+msgid "Build the docs cleanly"
+msgstr ""
+
+#: ../../maintainers.rst:67
+msgid ""
+"Make sure to clean all and have a clean build. Double-check visually that"
+" everything looks right."
+msgstr ""
+
+#: ../../maintainers.rst:70
+msgid "Double check CIs"
+msgstr ""
+
+#: ../../maintainers.rst:72
+msgid "Make sure CIs are green on the master branch."
+msgstr ""
+
+#: ../../maintainers.rst:74
+msgid "Update version"
+msgstr ""
+
+#: ../../maintainers.rst:76
+msgid ""
+"Update the version in ``sphinx_gallery/__init__.py``, which should end in"
+" ``.dev0``. You should remove ``.dev0``, and the numbers that remain will"
+" become the version for this release."
+msgstr ""
+
+#: ../../maintainers.rst:80
+msgid "Open a Pull Request that contains the two changes we've made above"
+msgstr ""
+
+#: ../../maintainers.rst:82
+msgid ""
+"The **version bump** and **the CHANGELOG update** should be in the PR. "
+"Get somebody else to make sure all looks well, and merge this pull "
+"request."
+msgstr ""
+
+#: ../../maintainers.rst:86
+msgid "Finalize the release"
+msgstr ""
+
+#: ../../maintainers.rst:88
+msgid "Create the new release on PyPI"
+msgstr ""
+
+#: ../../maintainers.rst:90
+msgid "Build a source distribution::"
+msgstr ""
+
+#: ../../maintainers.rst:94
+msgid "Check the release::"
+msgstr ""
+
+#: ../../maintainers.rst:98
+msgid "``<version>`` should be the release version, e.g., ``0.7.0``."
+msgstr ""
+
+#: ../../maintainers.rst:100
+msgid "Upload to PyPI::"
+msgstr ""
+
+#: ../../maintainers.rst:104
+msgid "Again, ``<version>`` should be the release version, e.g., ``0.7.0``."
+msgstr ""
+
+#: ../../maintainers.rst:106
+msgid ""
+"Confirm that the new version of Sphinx Gallery `is posted to pypi "
+"<https://pypi.org/project/sphinx-gallery/>`_."
+msgstr ""
+
+#: ../../maintainers.rst:109
+msgid "Create a new release on GitHub"
+msgstr ""
+
+#: ../../maintainers.rst:111
+msgid ""
+"Go to the `Draft a new release <https://github.com/sphinx-gallery/sphinx-"
+"gallery/releases/new>`_ page."
+msgstr ""
+
+#: ../../maintainers.rst:112
+msgid ""
+"The **tag version** is whatever the version is in ``__init__.py`` "
+"prepended with ``v``. E.g., ``v0.7.0``."
+msgstr ""
+
+#: ../../maintainers.rst:113
+msgid "The **release title** is ``Release <tag-version>``."
+msgstr ""
+
+#: ../../maintainers.rst:114
+msgid ""
+"The **description** should contain the markdown changelog you generated "
+"above (in the ``CHANGELOG.md`` file)."
+msgstr ""
+
+#: ../../maintainers.rst:116
+msgid "Click **Publish release** when you are done."
+msgstr ""
+
+#: ../../maintainers.rst:118
+msgid ""
+"Now that the releases are complete, we need to switch the \"master\" "
+"branch back into a developer mode. Bump the `Sphinx Gallery version "
+"number <https://github.com/sphinx-gallery/sphinx-"
+"gallery/blob/master/sphinx_gallery/__init__.py>`_ to the next minor (or "
+"major) release and append ``.dev0`` to the end, and make a PR for this "
+"change."
+msgstr ""
+
+#: ../../maintainers.rst:122
+msgid "Celebrate! You've just released a new version of Sphinx Gallery!"
+msgstr ""
+

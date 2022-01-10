@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:7
+msgid "Computation times"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:8
+msgid "**00:08.440** total execution time for **auto_examples_no_output** files:"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:11
+msgid ":ref:`sphx_glr_auto_examples_no_output_plot_raise.py` (``plot_raise.py``)"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:11
+msgid "00:08.437"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:11
+msgid "129.0 MB"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:13
+msgid ""
+":ref:`sphx_glr_auto_examples_no_output_plot_syntaxerror.py` "
+"(``plot_syntaxerror.py``)"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:13
+msgid "00:00.004"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:13
+msgid "131.8 MB"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:15
+msgid ":ref:`sphx_glr_auto_examples_no_output_just_code.py` (``just_code.py``)"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:15
+#: ../../auto_examples/no_output/sg_execution_times.rst:17
+msgid "00:00.000"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:15
+#: ../../auto_examples/no_output/sg_execution_times.rst:17
+msgid "0.0 MB"
+msgstr ""
+
+#: ../../auto_examples/no_output/sg_execution_times.rst:17
+msgid ""
+":ref:`sphx_glr_auto_examples_no_output_plot_strings.py` "
+"(``plot_strings.py``)"
+msgstr ""
+

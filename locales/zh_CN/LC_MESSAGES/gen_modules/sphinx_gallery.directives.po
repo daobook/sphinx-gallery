@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.directives.rst:5
+msgid "sphinx_gallery.directives"
+msgstr ""
+
+#: of sphinx_gallery.directives:2
+msgid "Custom Sphinx directives"
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.directives.rst:13
+msgid "Functions"
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.directives.rst:72
+msgid "Classes"
+msgstr ""
+
+#: of sphinx_gallery.directives.ImageSg:1
+msgid ""
+"Implements a directive to allow an optional hidpi image.  Meant to be "
+"used with the `image_srcset` configuration option."
+msgstr ""
+
+#: of sphinx_gallery.directives.ImageSg:4
+msgid "e.g.::"
+msgstr ""
+
+#: of sphinx_gallery.directives.ImageSg:12
+msgid "The resulting html is::"
+msgstr ""
+
+#: of sphinx_gallery.directives.MiniGallery:1
+msgid "Custom directive to insert a mini-gallery"
+msgstr ""
+
+#: of sphinx_gallery.directives.MiniGallery:3
+msgid ""
+"The required argument is one or more fully qualified names of objects, "
+"separated by spaces.  The mini-gallery will be the subset of gallery "
+"examples that make use of that object (from that specific namespace)."
+msgstr ""
+
+#: of sphinx_gallery.directives.MiniGallery:7
+msgid "Options:"
+msgstr ""
+
+#: of sphinx_gallery.directives.MiniGallery:9
+msgid ""
+"`add-heading` adds a heading to the mini-gallery.  If an argument is "
+"provided, it uses that text for the heading.  Otherwise, it uses default "
+"text."
+msgstr ""
+
+#: of sphinx_gallery.directives.MiniGallery:12
+msgid ""
+"`heading-level` specifies the heading level of the heading as a single "
+"character.  If omitted, the default heading level is `'^'`."
+msgstr ""
+

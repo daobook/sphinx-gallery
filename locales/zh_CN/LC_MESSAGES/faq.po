@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../faq.rst:2
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../faq.rst:7
+msgid "**Contents**"
+msgstr ""
+
+#: ../../faq.rst:10
+msgid "Why is `__file__` not defined? What can I use?"
+msgstr ""
+
+#: ../../faq.rst:12
+msgid ""
+"The global `__file__` variable defined by Python when running scripts is "
+"not defined on Jupyter notebooks. Since Sphinx-Gallery supports notebook "
+"styled examples and also exports to Jupyter notebooks we agreed on "
+"keeping this variable out of scope when executing the example scripts."
+msgstr ""
+
+#: ../../faq.rst:18
+msgid ""
+"Instead of `__file__` use :func:`os.getcwd` to get the directory where "
+"the file is located. Sphinx-Gallery executes the examples scripts in "
+"their source directory."
+msgstr ""
+
+#: ../../faq.rst:24
+msgid ""
+"`Github PR #166 <https://github.com/sphinx-gallery/sphinx-"
+"gallery/pull/166>`_ `Github PR #212 <https://github.com/sphinx-gallery"
+"/sphinx-gallery/pull/212>`_"
+msgstr ""
+
+#: ../../faq.rst:28
+msgid "Why am I getting text output for Matplotlib functions?"
+msgstr ""
+
+#: ../../faq.rst:30
+msgid ""
+"The output capturing behavior of Sphinx-Gallery changed with Sphinx-"
+"Gallery v0.5.0. Previous to v0.5.0, only data directed to standard output"
+" (e.g., only Matplotlib figures) was captured. In, v0.5.0, the "
+"configuration ``'capture_repr'`` (:ref:`capture_repr`) was added. This "
+"configuration allows a 'representation' of the last statement of each "
+"code block, if it is an expression, to be captured. The default setting "
+"of this new configuration, ``'capture_repr': ('_repr_html_', "
+"'__repr__')``, first attempts to capture the ``'_repr_html_'`` and if "
+"this does not exist, the ``'__repr__'``. This means that if the last "
+"statement was a Matplotlib function, which usually returns a value, the "
+"representation of that value will be captured as well."
+msgstr ""
+
+#: ../../faq.rst:41
+msgid ""
+"To prevent Matplotlib function calls from outputting text as well as the "
+"figure, you can assign the last plotting function to a temporary variable"
+" (e.g. ``_ = matplotlib.pyploy.plot()``) or add "
+"``matplotlib.pyplot.show()`` to the end of your code block (see "
+":ref:`capture_repr`). Alternatively, you can set ``capture_repr`` to be "
+"an empty tuple (``'capture_repr': ()``), which will imitate the behavior "
+"of Sphinx-Gallery prior to v0.5.0. This will also prevent you from "
+"getting any other unwanted output that did not occur prior to v0.5.0."
+msgstr ""
+

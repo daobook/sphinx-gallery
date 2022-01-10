@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.backreferences.rst:5
+msgid "sphinx_gallery.backreferences"
+msgstr ""
+
+#: of sphinx_gallery.backreferences:2
+msgid "Backreferences Generator"
+msgstr ""
+
+#: of sphinx_gallery.backreferences:4
+msgid "Parses example file code in order to keep track of used functions"
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.backreferences.rst:13
+msgid "Functions"
+msgstr ""
+
+#: of sphinx_gallery.backreferences.identify_names:1
+msgid "Build a codeobj summary by identifying and resolving used names."
+msgstr ""
+
+#: ../../../../../../gen_modules/backreferences/sphinx_gallery.backreferences.identify_names.examples:2
+msgid "Examples using ``sphinx_gallery.backreferences.identify_names``"
+msgstr ""
+
+#: ../../gen_modules/backreferences/sphinx_gallery.backreferences.identify_names.examples:10
+msgid "Identifying function names in a script"
+msgstr ""
+
+#: ../../gen_modules/backreferences/sphinx_gallery.backreferences.identify_names.examples:10
+#: ../../gen_modules/backreferences/sphinx_gallery.backreferences.identify_names.examples:18
+msgid ":ref:`sphx_glr_auto_examples_plot_6_function_identifier.py`"
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.backreferences.rst:30
+msgid "Classes"
+msgstr ""
+
+#: of sphinx_gallery.backreferences.DummyClass:1
+msgid "Dummy class for testing method resolution."
+msgstr ""
+
+#: of sphinx_gallery.backreferences.DummyClass.prop:1
+msgid "Property."
+msgstr ""
+
+#: of sphinx_gallery.backreferences.DummyClass.run:1
+msgid "Do nothing."
+msgstr ""
+
+#: of sphinx_gallery.backreferences.NameFinder:1
+msgid "Finds the longest form of variable names and their imports in code."
+msgstr ""
+
+#: of sphinx_gallery.backreferences.NameFinder:3
+msgid "Only retains names from imported modules."
+msgstr ""
+

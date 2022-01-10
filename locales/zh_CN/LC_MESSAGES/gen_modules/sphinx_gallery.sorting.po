@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.sorting.rst:5
+msgid "sphinx_gallery.sorting"
+msgstr ""
+
+#: of sphinx_gallery.sorting:2
+msgid "Sorters for Sphinx-Gallery (sub)sections"
+msgstr ""
+
+#: of sphinx_gallery.sorting:4
+msgid "Sorting key functions for gallery subsection folders and section files."
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.sorting.rst:17
+msgid "Classes"
+msgstr ""
+
+#: of sphinx_gallery.sorting.ExampleTitleSortKey:1
+msgid "Sort examples in src_dir by example title."
+msgstr ""
+
+#: of sphinx_gallery.sorting.ExampleTitleSortKey
+#: sphinx_gallery.sorting.ExplicitOrder sphinx_gallery.sorting.FileNameSortKey
+#: sphinx_gallery.sorting.FileSizeSortKey
+#: sphinx_gallery.sorting.NumberOfCodeLinesSortKey
+msgid "参数"
+msgstr ""
+
+#: of sphinx_gallery.sorting.ExampleTitleSortKey:3
+#: sphinx_gallery.sorting.FileNameSortKey:3
+#: sphinx_gallery.sorting.FileSizeSortKey:3
+#: sphinx_gallery.sorting.NumberOfCodeLinesSortKey:3
+msgid "The source directory."
+msgstr ""
+
+#: of sphinx_gallery.sorting.ExplicitOrder:1
+msgid "Sorting key for all gallery subsections."
+msgstr ""
+
+#: of sphinx_gallery.sorting.ExplicitOrder:3
+msgid "This requires all folders to be listed otherwise an exception is raised."
+msgstr ""
+
+#: of sphinx_gallery.sorting.ExplicitOrder:5
+msgid "Hold the paths of each galleries' subsections."
+msgstr ""
+
+#: of sphinx_gallery.sorting.ExplicitOrder
+msgid "引发"
+msgstr ""
+
+#: of sphinx_gallery.sorting.ExplicitOrder:8
+msgid "Wrong input type or Subgallery path missing."
+msgstr ""
+
+#: of sphinx_gallery.sorting.FileNameSortKey:1
+msgid "Sort examples in src_dir by file name."
+msgstr ""
+
+#: of sphinx_gallery.sorting.FileSizeSortKey:1
+msgid "Sort examples in src_dir by file size."
+msgstr ""
+
+#: of sphinx_gallery.sorting.NumberOfCodeLinesSortKey:1
+msgid "Sort examples in src_dir by the number of code lines."
+msgstr ""
+

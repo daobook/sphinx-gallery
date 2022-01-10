@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../reference.rst:5
+msgid "Sphinx-Gallery API Reference"
+msgstr ""
+
+#: ../../reference.rst:7
+msgid ""
+"The complete Sphinx-Gallery project is automatically documented for every"
+" module."
+msgstr ""
+
+#: of sphinx_gallery:2
+msgid "Sphinx Gallery"
+msgstr ""
+
+#: ../../reference.rst:16
+msgid ":py:mod:`sphinx_gallery`:"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`gen_gallery <sphinx_gallery.gen_gallery>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Sphinx-Gallery Generator"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`backreferences <sphinx_gallery.backreferences>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Backreferences Generator"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`gen_rst <sphinx_gallery.gen_rst>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "RST file generator"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`scrapers <sphinx_gallery.scrapers>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Scrapers for embedding images"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`py_source_parser <sphinx_gallery.py_source_parser>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Parser for python source files"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`docs_resolv <sphinx_gallery.docs_resolv>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Link resolver objects"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`notebook <sphinx_gallery.notebook>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Parser for Jupyter notebooks"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`downloads <sphinx_gallery.downloads>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Utilities for downloadable items"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`sorting <sphinx_gallery.sorting>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Sorters for Sphinx-Gallery (sub)sections"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`binder <sphinx_gallery.binder>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Binder utility functions"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid ":py:obj:`directives <sphinx_gallery.directives>`\\"
+msgstr ""
+
+#: ../../reference.rst:33:<autosummary>:1
+msgid "Custom Sphinx directives"
+msgstr ""
+
+#: of sphinx_gallery.utils:2
+msgid "Utilities"
+msgstr ""
+
+#: of sphinx_gallery.utils:4
+msgid "Miscellaneous utilities."
+msgstr ""
+
+#: ../../reference.rst:40
+msgid ":py:mod:`sphinx_gallery.utils`:"
+msgstr ""
+
+#: ../../reference.rst:46:<autosummary>:1
+msgid ""
+":py:obj:`optipng <sphinx_gallery.utils.optipng>`\\ \\(fname\\[\\, "
+"args\\]\\)"
+msgstr ""
+
+#: ../../reference.rst:46:<autosummary>:1
+msgid "Optimize a PNG in place."
+msgstr ""
+

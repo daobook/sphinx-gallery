@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.py_source_parser.rst:5
+msgid "sphinx_gallery.py_source_parser"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser:2
+msgid "Parser for python source files"
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.py_source_parser.rst:13
+msgid "Functions"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.extract_file_config:1
+msgid "Pull out the file-specific config specified in the docstring."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.parse_source_file:1
+msgid "Parse source file into AST node."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.parse_source_file
+#: sphinx_gallery.py_source_parser.remove_config_comments
+#: sphinx_gallery.py_source_parser.split_code_and_text_blocks
+msgid "参数"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.parse_source_file:3
+msgid "File path"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.parse_source_file
+#: sphinx_gallery.py_source_parser.split_code_and_text_blocks
+msgid "返回"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.parse_source_file:6
+msgid "* **node** (*AST node*) * **content** (*utf-8 encoded string*)"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.parse_source_file:6
+msgid "**node** (*AST node*)"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.parse_source_file:7
+msgid "**content** (*utf-8 encoded string*)"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.remove_config_comments:1
+msgid "Return the content of *code_block* with in-file config comments removed."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.remove_config_comments:3
+msgid ""
+"Comment lines of the pattern '# sphinx_gallery_[option] = [val]' are "
+"removed, but surrounding empty lines are preserved."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.remove_config_comments:6
+msgid "A code segment."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.split_code_and_text_blocks:1
+msgid "Return list with source file separated into code and text blocks."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.split_code_and_text_blocks:3
+msgid "Path to the source file."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.split_code_and_text_blocks:5
+msgid "If True, return the ast node."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.split_code_and_text_blocks:8
+msgid ""
+"* **file_conf** (*dict*) -- File-specific settings given in source file "
+"comments as:   ``# sphinx_gallery_<name> = <value>`` * **blocks** "
+"(*list*) -- (label, content, line_number)   List where each element is a "
+"tuple with the label ('text' or 'code'),   the corresponding content "
+"string of block and the leading line number * **node** (*ast Node*) -- "
+"The parsed node."
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.split_code_and_text_blocks:8
+msgid ""
+"**file_conf** (*dict*) -- File-specific settings given in source file "
+"comments as: ``# sphinx_gallery_<name> = <value>``"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.split_code_and_text_blocks:10
+msgid ""
+"**blocks** (*list*) -- (label, content, line_number) List where each "
+"element is a tuple with the label ('text' or 'code'), the corresponding "
+"content string of block and the leading line number"
+msgstr ""
+
+#: of sphinx_gallery.py_source_parser.split_code_and_text_blocks:13
+msgid "**node** (*ast Node*) -- The parsed node."
+msgstr ""
+
+#: ../../../../../../gen_modules/backreferences/sphinx_gallery.py_source_parser.split_code_and_text_blocks.examples:2
+msgid ""
+"Examples using "
+"``sphinx_gallery.py_source_parser.split_code_and_text_blocks``"
+msgstr ""
+
+#: ../../gen_modules/backreferences/sphinx_gallery.py_source_parser.split_code_and_text_blocks.examples:10
+msgid "Identifying function names in a script"
+msgstr ""
+
+#: ../../gen_modules/backreferences/sphinx_gallery.py_source_parser.split_code_and_text_blocks.examples:10
+#: ../../gen_modules/backreferences/sphinx_gallery.py_source_parser.split_code_and_text_blocks.examples:18
+msgid ":ref:`sphx_glr_auto_examples_plot_6_function_identifier.py`"
+msgstr ""
+

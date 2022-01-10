@@ -1,0 +1,318 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../getting_started.rst:3
+msgid "Getting Started with Sphinx-Gallery"
+msgstr ""
+
+#: ../../getting_started.rst:8
+msgid "Creating a basic Gallery"
+msgstr ""
+
+#: ../../getting_started.rst:10
+msgid ""
+"This section describes how to set up a basic gallery for your examples "
+"using the Sphinx extension Sphinx-Gallery, which will do the following:"
+msgstr ""
+
+#: ../../getting_started.rst:13
+msgid ""
+"Automatically generate `Sphinx rST <https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/basics.html>`_ out of your "
+"``.py`` example files. The rendering of the resulting rST will provide "
+"the users with ``.ipynb`` (Jupyter notebook) and ``.py`` files of each "
+"example, which users can download."
+msgstr ""
+
+#: ../../getting_started.rst:19
+msgid ""
+"Create a gallery with thumbnails for each of these examples (such as `the"
+" one that scikit-learn <http://scikit-"
+"learn.org/stable/auto_examples/index.html>`_ uses)."
+msgstr ""
+
+#: ../../getting_started.rst:23
+msgid ""
+"A `template repository <https://github.com/sphinx-gallery/sample-"
+"project>`_, with sample example galleries and basic configurations is "
+"also available to help you get started."
+msgstr ""
+
+#: ../../getting_started.rst:30
+msgid "Overview your project files and folders"
+msgstr ""
+
+#: ../../getting_started.rst:32
+msgid ""
+"This section describes the general files and structure needed for Sphinx-"
+"Gallery to build your examples."
+msgstr ""
+
+#: ../../getting_started.rst:35
+msgid "Let's say your Python project has the following structure:"
+msgstr ""
+
+#: ../../getting_started.rst:53
+msgid ""
+"``doc`` is the Sphinx 'source directory'. It contains the Sphinx base "
+"configuration files. Default versions of these base files can obtained "
+"from executing ``sphinx-quickstart`` (more details at `Sphinx-quickstart "
+"<http://www.sphinx-doc.org/en/master/usage/quickstart.html>`_). Sphinx "
+"``.rst`` source files are generally also placed here (none included in "
+"our example directory structure above) but these are unassociated with "
+"Sphinx-Gallery functions."
+msgstr ""
+
+#: ../../getting_started.rst:61
+msgid ""
+"``my_python_module`` contains the ``.py`` files of your Python module. "
+"This directory is not required and Sphinx-Gallery can be used for a "
+"variety of purposes outside of documenting examples for a package, for "
+"example creating a website for a Python tutorial."
+msgstr ""
+
+#: ../../getting_started.rst:66
+msgid ""
+"``examples`` contains the files used by Sphinx-Gallery to build the "
+"gallery."
+msgstr ""
+
+#: ../../getting_started.rst:68
+msgid ""
+"Sphinx-Gallery expects the ``examples`` directory to have a specific "
+"structure, which we'll cover next."
+msgstr ""
+
+#: ../../getting_started.rst:72
+msgid "Structure the examples folder"
+msgstr ""
+
+#: ../../getting_started.rst:74
+msgid ""
+"In order for Sphinx-Gallery to build a gallery from your ``examples`` "
+"folder, this folder must have the following things:"
+msgstr ""
+
+#: ../../getting_started.rst:77
+msgid ""
+"**The gallery header**: A file named ``README.txt`` or ``README.rst`` "
+"that contains rST to be used as a header for the gallery welcome page, "
+"which will also include thumbnails generated from this folder. It must "
+"have at least a title. For example::"
+msgstr ""
+
+#: ../../getting_started.rst:87
+msgid ""
+"**Example Python scripts**: A collection of Python scripts that will be "
+"processed when you build your HTML documentation. For information on how "
+"to structure these Python scripts with embedded rST, see "
+":ref:`python_script_syntax`."
+msgstr ""
+
+#: ../../getting_started.rst:92
+msgid ""
+"By default **only** files prefixed with ``plot_`` will be executed and "
+"their outputs captured to incorporate them in the HTML output of the "
+"script. Files without that prefix will be only parsed and presented in a "
+"rich literate programming fashion, without any output. To change the "
+"default file pattern for execution and capture see :ref:`build_pattern`."
+msgstr ""
+
+#: ../../getting_started.rst:98
+msgid ""
+"The output that is captured while executing the ``.py`` files and "
+"subsequently incorporated into the built documentation can be finely "
+"tuned. See :ref:`capture_repr`."
+msgstr ""
+
+#: ../../getting_started.rst:101
+msgid ""
+"You can have sub-directories in your ``examples`` directory. These will "
+"be included as sub-sections of your gallery. They **must** contain their "
+"own ``README.txt`` or ``README.rst`` file as well."
+msgstr ""
+
+#: ../../getting_started.rst:107
+msgid ""
+"The variable name ``___`` (3 underscores) should never be used in your "
+"example Python scripts as it is used as an internal Sphinx-Gallery "
+"variable."
+msgstr ""
+
+#: ../../getting_started.rst:113
+msgid "Configure and use Sphinx-Gallery"
+msgstr ""
+
+#: ../../getting_started.rst:115
+msgid ""
+"After Sphinx-Gallery is installed, we must enable and configure it to "
+"build with Sphinx."
+msgstr ""
+
+#: ../../getting_started.rst:118
+msgid "First, enable Sphinx-Gallery in the Sphinx ``doc/conf.py`` file with::"
+msgstr ""
+
+#: ../../getting_started.rst:125
+msgid ""
+"This loads Sphinx-Gallery as one of your extensions, the ellipsis ``...``"
+" represents your other loaded extensions."
+msgstr ""
+
+#: ../../getting_started.rst:128
+msgid ""
+"Next, create your configuration dictionary for Sphinx-Gallery. Here we "
+"will simply set the minimal required configurations. We must set the "
+"location of the 'examples' directory (containing the gallery header file "
+"and our example Python scripts) and the directory to place the output "
+"files generated. The path to both of these directories should be relative"
+" to the ``doc/conf.py`` file."
+msgstr ""
+
+#: ../../getting_started.rst:135
+msgid ""
+"The following configuration declares the location of the 'examples' "
+"directory (``'example_dirs'``) to be ``../examples`` and the 'output' "
+"directory (``'gallery_dirs'``) to be ``auto_examples``::"
+msgstr ""
+
+#: ../../getting_started.rst:144
+msgid ""
+"After building your documentation, ``gallery_dirs`` will contain the "
+"following files and directories:"
+msgstr ""
+
+#: ../../getting_started.rst:147
+msgid ""
+"``index.rst`` - the master document of the gallery containing the gallery"
+" header, table of contents tree and thumbnails for each example. It will "
+"serve as the welcome page for that gallery."
+msgstr ""
+
+#: ../../getting_started.rst:150
+msgid ""
+"``sg_execution_times.rst`` - execution time of all example ``.py`` files,"
+" summarised in table format (`original pull request on GitHub "
+"<https://github.com/sphinx-gallery/sphinx-gallery/pull/348>`_)."
+msgstr ""
+
+#: ../../getting_started.rst:153
+msgid ""
+"``images`` - directory containing images produced during execution of the"
+" example ``.py`` files (more details in :ref:`image_scrapers`) and "
+"thumbnail images for the gallery."
+msgstr ""
+
+#: ../../getting_started.rst:156
+msgid ""
+"A directory for each sub-directory in ``'example_dirs'``. Within each "
+"directory will be the above and below listed files for that 'sub-"
+"gallery'."
+msgstr ""
+
+#: ../../getting_started.rst:159
+msgid ""
+"Additionally for **each** ``.py`` file, a file with the following suffix "
+"is generated:"
+msgstr ""
+
+#: ../../getting_started.rst:162
+msgid ""
+"``.rst`` - the rendered rST version of the ``.py`` file, ready for Sphinx"
+" to build."
+msgstr ""
+
+#: ../../getting_started.rst:164
+msgid ""
+"``.ipynb`` - to enable the user to download a Jupyter notebook version of"
+" the example."
+msgstr ""
+
+#: ../../getting_started.rst:166
+msgid "``.py`` - to enable the user to download a ``.py`` version of the example."
+msgstr ""
+
+#: ../../getting_started.rst:167
+msgid ""
+"``.py.md5`` - a md5 hash of the ``.py`` file, used to determine if "
+"changes have been made to the file and thus if new output files need to "
+"be generated."
+msgstr ""
+
+#: ../../getting_started.rst:169
+msgid ""
+"``_codeobj.pickle`` - used to identify function names and to which module"
+" they belong (more details in "
+":ref:`sphx_glr_auto_examples_plot_6_function_identifier.py`)"
+msgstr ""
+
+#: ../../getting_started.rst:173
+msgid ""
+"Additionally, two compressed ``.zip`` files containing all the ``.ipynb``"
+" and ``.py`` files are generated."
+msgstr ""
+
+#: ../../getting_started.rst:176
+msgid "For more advanced configuration, see the :ref:`configuration` page."
+msgstr ""
+
+#: ../../getting_started.rst:179
+msgid "Add your gallery to the documentation"
+msgstr ""
+
+#: ../../getting_started.rst:181
+msgid ""
+"The ``index.rst`` file generated for your gallery can be added to the "
+"table of contents tree in the main Sphinx ``doc/index.rst`` file  or "
+"embedded in a Sphinx source ``.rst`` file with an ``.. include::`` "
+"statement."
+msgstr ""
+
+#: ../../getting_started.rst:186
+msgid "Build the documentation"
+msgstr ""
+
+#: ../../getting_started.rst:188
+msgid "In your Sphinx source directory, (e.g., ``myproject/doc``) execute:"
+msgstr ""
+
+#: ../../getting_started.rst:194
+msgid ""
+"This will start the build of your complete documentation. Both the "
+"Sphinx-Gallery output files described above and the Sphinx built HTML "
+"documentation will be generated. Once a build is completed, all the "
+"outputs from your examples will be cached. In the future, only examples "
+"that have changed will be re-built."
+msgstr ""
+
+#: ../../getting_started.rst:201
+msgid ""
+"You should now have a gallery built from your example scripts! For more "
+"advanced usage and configuration, check out the :ref:`advanced_usage` "
+"page or the :ref:`configuration` reference."
+msgstr ""
+
+#: ../../getting_started.rst:206
+msgid ""
+"Sphinx-Gallery may work for non-HTML Sphinx `builders <https://www"
+".sphinx-doc.org/en/master/man/sphinx-build.html>`_ but support for this "
+"is mostly untested and results may vary."
+msgstr ""
+

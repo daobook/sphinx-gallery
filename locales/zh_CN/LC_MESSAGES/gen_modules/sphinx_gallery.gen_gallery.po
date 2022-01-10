@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.gen_gallery.rst:5
+msgid "sphinx_gallery.gen_gallery"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery:2
+msgid "Sphinx-Gallery Generator"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery:4
+msgid ""
+"Attaches Sphinx-Gallery to Sphinx in order to generate the galleries when"
+" building the documentation."
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.gen_gallery.rst:13
+msgid "Functions"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.check_duplicate_filenames:1
+msgid "Check for duplicate filenames across gallery directories."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.check_spaces_in_filenames:1
+msgid "Check for spaces in filenames across example directories."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.collect_gallery_files:1
+msgid "Collect python files from the gallery example directories."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.generate_gallery_rst:1
+msgid "Generate the Main examples gallery reStructuredText"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.generate_gallery_rst:3
+msgid ""
+"Start the Sphinx-Gallery configuration and recursively scan the examples "
+"directories in order to populate the examples gallery"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.get_subsections:1
+msgid "Return the list of subsections of a gallery."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.get_subsections
+msgid "参数"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.get_subsections:3
+msgid "absolute path to directory containing conf.py"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.get_subsections:5
+msgid "path to the examples directory relative to conf.py"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.get_subsections:7
+msgid "The gallery configuration."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.get_subsections
+msgid "返回"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.get_subsections:10
+msgid "**out** -- sorted list of gallery subsection folder names"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.get_subsections
+msgid "返回类型"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.parse_config:1
+msgid "Process the Sphinx Gallery configuration."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.setup:1
+msgid "Setup Sphinx-Gallery sphinx extension"
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.summarize_failing_examples:1
+msgid "Collects the list of falling examples and prints them with a traceback."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.summarize_failing_examples:3
+msgid "Raises ValueError if there where failing examples."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.touch_empty_backreferences:1
+msgid "Generate empty back-reference example files."
+msgstr ""
+
+#: of sphinx_gallery.gen_gallery.touch_empty_backreferences:3
+msgid ""
+"This avoids inclusion errors/warnings if there are no gallery examples "
+"for a class / module that is being parsed by autodoc"
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.gen_gallery.rst:121
+msgid "Classes"
+msgstr ""
+

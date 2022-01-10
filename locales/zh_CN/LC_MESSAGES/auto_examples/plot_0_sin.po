@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../auto_examples/plot_0_sin.rst:13
+msgid ""
+"Click :ref:`here <sphx_glr_download_auto_examples_plot_0_sin.py>` to "
+"download the full example code or to run this example in your browser via"
+" Binder"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:22
+msgid "Introductory example - Plotting sin"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:24
+msgid ""
+"This is a general example demonstrating a Matplotlib plot output, "
+"embedded rST, the use of math notation and cross-linking to other "
+"examples. It would be useful to compare the :download:`source Python file"
+" <plot_0_sin.py>` with the output below."
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:29
+msgid ""
+"Source files for gallery examples should start with a triple-quoted "
+"header docstring. Anything before the docstring is ignored by Sphinx-"
+"Gallery and will not appear in the rendered output, nor will it be "
+"executed. This docstring requires a rST header, which is used as the "
+"title of the example and to correctly build cross-referencing links."
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:35
+#, python-format
+msgid ""
+"Code and embedded rST text blocks follow the docstring. The first block "
+"immediately after the docstring is deemed a code block, by default, "
+"unless you specify it to be a text block using a line of ``#``'s or "
+"``#%%`` (see below). All code blocks get executed by Sphinx-Gallery and "
+"any output, including plots will be captured. Typically, code and text "
+"blocks are interspersed to provide narrative explanations of what the "
+"code is doing or interpretations of code output."
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:43
+msgid ""
+"Mathematical expressions can be included as LaTeX, and will be rendered "
+"with MathJax. To include displayed math notation, use the directive ``.. "
+"math::``. To include inline math notation use the ``:math:`` role. For "
+"example, we are about to plot the following function:"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:48
+msgid "x \\rightarrow \\sin(x)"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:52
+msgid ""
+"Here the function :math:`\\sin` is evaluated at each point the variable "
+":math:`x` is defined. When including LaTeX in a Python string, ensure "
+"that you escape the backslashes or use a :ref:`raw docstring "
+"<python:strings>`. You do not need to do this in text blocks (see below)."
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:91
+#, python-format
+msgid ""
+"To include embedded rST, use a line of >= 20 ``#``'s or ``#%%`` between "
+"your rST and your code (see :ref:`embedding_rst`). This separates your "
+"example into distinct text and code blocks. You can continue writing code"
+" below the embedded rST text block:"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:109
+msgid "Out:"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:120
+msgid ""
+"LaTeX syntax in the text blocks does not require backslashes to be "
+"escaped:"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:122
+msgid ""
+"\\sin\n"
+"\n"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:128
+msgid "Cross referencing"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:130
+msgid ""
+"You can refer to an example from any part of the documentation, including"
+" from other examples. Sphinx-Gallery automatically creates reference "
+"labels for each example. The label consists of the ``.py`` file name, "
+"prefixed with ``sphx_glr_`` and the name of the folder(s) the example is "
+"in. Below, the example we want to cross-reference is in ``auto_examples``"
+" (the ``gallery_dirs``; see :ref:`configure_and_use_sphinx_gallery`), "
+"then the subdirectory ``no_output`` (since the example is within a sub-"
+"gallery). The file name of the example is ``plot_syntaxerror.py``. We can"
+" thus cross-link to the example 'SyntaxError' using: "
+"``:ref:`sphx_glr_auto_examples_no_output_plot_syntaxerror.py```."
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:143
+msgid ""
+"See :ref:`sphx_glr_auto_examples_no_output_plot_syntaxerror.py` for an "
+"example with an error."
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:151
+msgid "**Total running time of the script:** ( 0 minutes  0.380 seconds)"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst
+msgid "Launch binder"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:173
+msgid ":download:`Download Python source code: plot_0_sin.py <plot_0_sin.py>`"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:179
+msgid ":download:`Download Jupyter notebook: plot_0_sin.ipynb <plot_0_sin.ipynb>`"
+msgstr ""
+
+#: ../../auto_examples/plot_0_sin.rst:186
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

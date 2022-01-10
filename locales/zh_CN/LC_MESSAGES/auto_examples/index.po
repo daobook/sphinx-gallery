@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../auto_examples/index.rst:10
+msgid "Gallery of Examples"
+msgstr ""
+
+#: ../../auto_examples/index.rst:12
+msgid ""
+"This page consists of the 'General example' gallery and a sub-gallery, "
+"'No image output examples'. This sub-gallery is generated from a sub-"
+"directory within the general examples directory. The file structure of "
+"this gallery looks like this:"
+msgstr ""
+
+#: ../../auto_examples/index.rst:29
+msgid "General examples"
+msgstr ""
+
+#: ../../auto_examples/index.rst:31
+msgid ""
+"This gallery consists of introductory examples and examples demonstrating"
+" specific features of Sphinx-Gallery."
+msgstr ""
+
+#: ../../auto_examples/index.rst:44
+msgid "Local module"
+msgstr ""
+
+#: ../../auto_examples/index.rst:44
+msgid ":ref:`sphx_glr_auto_examples_local_module.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:65
+msgid "Introductory example - Plotting sin"
+msgstr ""
+
+#: ../../auto_examples/index.rst:65
+msgid ":ref:`sphx_glr_auto_examples_plot_0_sin.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:86
+msgid "Plotting the exponential function"
+msgstr ""
+
+#: ../../auto_examples/index.rst:86
+msgid ":ref:`sphx_glr_auto_examples_plot_1_exp.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:107
+msgid "Seaborn example"
+msgstr ""
+
+#: ../../auto_examples/index.rst:107
+msgid ":ref:`sphx_glr_auto_examples_plot_2_seaborn.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:128
+msgid "Capturing output representations"
+msgstr ""
+
+#: ../../auto_examples/index.rst:128
+msgid ":ref:`sphx_glr_auto_examples_plot_3_capture_repr.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:149
+msgid "Choosing the thumbnail figure"
+msgstr ""
+
+#: ../../auto_examples/index.rst:149
+msgid ":ref:`sphx_glr_auto_examples_plot_4_choose_thumbnail.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:170
+msgid "Providing a figure for the thumbnail image"
+msgstr ""
+
+#: ../../auto_examples/index.rst:170
+msgid ":ref:`sphx_glr_auto_examples_plot_4b_provide_thumbnail.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:191
+msgid "Using Unicode everywhere 🤗"
+msgstr ""
+
+#: ../../auto_examples/index.rst:191
+msgid ":ref:`sphx_glr_auto_examples_plot_5_unicode_everywhere.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:212
+msgid "Identifying function names in a script"
+msgstr ""
+
+#: ../../auto_examples/index.rst:212
+msgid ":ref:`sphx_glr_auto_examples_plot_6_function_identifier.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:233
+msgid "Using ``sys.argv`` in examples"
+msgstr ""
+
+#: ../../auto_examples/index.rst:233
+msgid ":ref:`sphx_glr_auto_examples_plot_7_sys_argv.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:254
+msgid "Matplotlib animation support"
+msgstr ""
+
+#: ../../auto_examples/index.rst:254
+msgid ":ref:`sphx_glr_auto_examples_plot_8_animations.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:275
+msgid "Example with the plotly graphing library"
+msgstr ""
+
+#: ../../auto_examples/index.rst:275
+msgid ":ref:`sphx_glr_auto_examples_plot_9_plotly.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:297
+msgid "No image output examples"
+msgstr ""
+
+#: ../../auto_examples/index.rst:299
+msgid ""
+"This section gathers examples which don't produce any figures. Some "
+"examples only output to standard output, others demonstrate how Sphinx-"
+"Gallery handles examples with errors."
+msgstr ""
+
+#: ../../auto_examples/index.rst:314
+msgid "A short Python script"
+msgstr ""
+
+#: ../../auto_examples/index.rst:314
+msgid ":ref:`sphx_glr_auto_examples_no_output_just_code.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:335
+msgid "Example that fails to execute"
+msgstr ""
+
+#: ../../auto_examples/index.rst:335
+msgid ":ref:`sphx_glr_auto_examples_no_output_plot_raise.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:356
+msgid "Constrained Text output frame"
+msgstr ""
+
+#: ../../auto_examples/index.rst:356
+msgid ":ref:`sphx_glr_auto_examples_no_output_plot_strings.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:377
+msgid "SyntaxError"
+msgstr ""
+
+#: ../../auto_examples/index.rst:377
+msgid ":ref:`sphx_glr_auto_examples_no_output_plot_syntaxerror.py`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:402
+msgid ""
+":download:`Download all examples in Python source code: "
+"auto_examples_python.zip </auto_examples/auto_examples_python.zip>`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:408
+msgid ""
+":download:`Download all examples in Jupyter notebooks: "
+"auto_examples_jupyter.zip </auto_examples/auto_examples_jupyter.zip>`"
+msgstr ""
+
+#: ../../auto_examples/index.rst:415
+msgid "`Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_"
+msgstr ""
+

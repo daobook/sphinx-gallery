@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.utils.optipng.rst:5
+msgid "sphinx_gallery.utils.optipng"
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng:1
+msgid "Optimize a PNG in place."
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng
+msgid "param fname"
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng:3
+msgid ""
+"The filename. If it ends with '.png', ``optipng -o7 fname`` will be run. "
+"If it fails because the ``optipng`` executable is not found or optipng "
+"fails, the function returns."
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng
+msgid "type fname"
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng:6
+msgid "str"
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng
+msgid "param args"
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng:7
+msgid "Extra command-line arguments, such as ``['-o7']``."
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng
+msgid "type args"
+msgstr ""
+
+#: of sphinx_gallery.utils.optipng:8
+msgid "tuple"
+msgstr ""
+

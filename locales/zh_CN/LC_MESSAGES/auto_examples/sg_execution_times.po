@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../auto_examples/sg_execution_times.rst:7
+msgid "Computation times"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:8
+msgid "**00:05.102** total execution time for **auto_examples** files:"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:11
+msgid ":ref:`sphx_glr_auto_examples_plot_2_seaborn.py` (``plot_2_seaborn.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:11
+msgid "00:03.065"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:11
+#: ../../auto_examples/sg_execution_times.rst:13
+#: ../../auto_examples/sg_execution_times.rst:15
+#: ../../auto_examples/sg_execution_times.rst:17
+#: ../../auto_examples/sg_execution_times.rst:19
+#: ../../auto_examples/sg_execution_times.rst:21
+#: ../../auto_examples/sg_execution_times.rst:23
+#: ../../auto_examples/sg_execution_times.rst:25
+#: ../../auto_examples/sg_execution_times.rst:27
+#: ../../auto_examples/sg_execution_times.rst:29
+#: ../../auto_examples/sg_execution_times.rst:31
+#: ../../auto_examples/sg_execution_times.rst:33
+msgid "0.0 MB"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:13
+msgid ":ref:`sphx_glr_auto_examples_plot_9_plotly.py` (``plot_9_plotly.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:13
+msgid "00:01.312"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:15
+msgid ""
+":ref:`sphx_glr_auto_examples_plot_3_capture_repr.py` "
+"(``plot_3_capture_repr.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:15
+msgid "00:00.725"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:17
+msgid ":ref:`sphx_glr_auto_examples_local_module.py` (``local_module.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:17
+#: ../../auto_examples/sg_execution_times.rst:19
+#: ../../auto_examples/sg_execution_times.rst:21
+#: ../../auto_examples/sg_execution_times.rst:23
+#: ../../auto_examples/sg_execution_times.rst:25
+#: ../../auto_examples/sg_execution_times.rst:27
+#: ../../auto_examples/sg_execution_times.rst:29
+#: ../../auto_examples/sg_execution_times.rst:31
+#: ../../auto_examples/sg_execution_times.rst:33
+msgid "00:00.000"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:19
+msgid ":ref:`sphx_glr_auto_examples_plot_0_sin.py` (``plot_0_sin.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:21
+msgid ":ref:`sphx_glr_auto_examples_plot_1_exp.py` (``plot_1_exp.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:23
+msgid ""
+":ref:`sphx_glr_auto_examples_plot_4_choose_thumbnail.py` "
+"(``plot_4_choose_thumbnail.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:25
+msgid ""
+":ref:`sphx_glr_auto_examples_plot_4b_provide_thumbnail.py` "
+"(``plot_4b_provide_thumbnail.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:27
+msgid ""
+":ref:`sphx_glr_auto_examples_plot_5_unicode_everywhere.py` "
+"(``plot_5_unicode_everywhere.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:29
+msgid ""
+":ref:`sphx_glr_auto_examples_plot_6_function_identifier.py` "
+"(``plot_6_function_identifier.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:31
+msgid ":ref:`sphx_glr_auto_examples_plot_7_sys_argv.py` (``plot_7_sys_argv.py``)"
+msgstr ""
+
+#: ../../auto_examples/sg_execution_times.rst:33
+msgid ""
+":ref:`sphx_glr_auto_examples_plot_8_animations.py` "
+"(``plot_8_animations.py``)"
+msgstr ""
+

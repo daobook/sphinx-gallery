@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../gen_modules/sphinx_gallery.gen_rst.rst:5
+msgid "sphinx_gallery.gen_rst"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst:2
+msgid "RST file generator"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst:4
+msgid ""
+"Generate the rst files for the examples by iterating over the python "
+"example files."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst:7
+msgid "Files that generate images should start with 'plot'."
+msgstr ""
+
+#: ../../gen_modules/sphinx_gallery.gen_rst.rst:13
+msgid "Functions"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.codestr2rst:1
+msgid "Return reStructuredText code block from code string."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.executable_script:1
+msgid "Validate if script has to be run according to gallery configuration"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.executable_script
+#: sphinx_gallery.gen_rst.execute_code_block
+#: sphinx_gallery.gen_rst.execute_script
+#: sphinx_gallery.gen_rst.generate_file_rst sphinx_gallery.gen_rst.rst_blocks
+#: sphinx_gallery.gen_rst.save_rst_example
+#: sphinx_gallery.gen_rst.save_thumbnail
+msgid "参数"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.executable_script:3
+msgid "path to python script"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.executable_script:5
+#: sphinx_gallery.gen_rst.execute_script:9
+#: sphinx_gallery.gen_rst.generate_file_rst:9
+#: sphinx_gallery.gen_rst.rst_blocks:13
+msgid "Contains the configuration of Sphinx-Gallery"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.executable_script
+#: sphinx_gallery.gen_rst.execute_code_block
+#: sphinx_gallery.gen_rst.execute_script
+#: sphinx_gallery.gen_rst.generate_file_rst sphinx_gallery.gen_rst.rst_blocks
+msgid "返回"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.executable_script:8
+msgid "True if script has to be executed"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.executable_script
+#: sphinx_gallery.gen_rst.execute_code_block sphinx_gallery.gen_rst.rst_blocks
+msgid "返回类型"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_code_block:1
+msgid "Execute the code block of the example file."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_code_block:3
+msgid "Compiler to compile AST of code block."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_code_block:5
+msgid ""
+"List of Tuples, each Tuple contains label ('text' or 'code'), the "
+"corresponding content string of block and the leading line number."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_code_block:8
+msgid "Global variables for examples."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_code_block:10
+msgid "Configuration and runtime variables."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_code_block:12
+msgid "Gallery configurations."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_code_block:15
+msgid "**code_output** -- Output of executing code in rST."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_script:1
+msgid "Execute and capture output from python script already in block structure"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_script:3
+#: sphinx_gallery.gen_rst.rst_blocks:3
+msgid ""
+"(label, content, line_number) List where each element is a tuple with the"
+" label ('text' or 'code'), the corresponding content string of block and "
+"the leading line number"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_script:7
+#: sphinx_gallery.gen_rst.save_thumbnail:7
+msgid "Configuration and run time variables"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_script:12
+msgid ""
+"* **output_blocks** (*list*) -- List of strings where each element is the"
+" restructured text   representation of the output of each block * "
+"**time_elapsed** (*float*) -- Time elapsed during execution"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_script:12
+msgid ""
+"**output_blocks** (*list*) -- List of strings where each element is the "
+"restructured text representation of the output of each block"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.execute_script:14
+msgid "**time_elapsed** (*float*) -- Time elapsed during execution"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.extract_intro_and_title:1
+msgid "Extract and clean the first paragraph of module-level docstring."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_dir_rst:1
+msgid "Generate the gallery reStructuredText for an example directory."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_file_rst:1
+msgid "Generate the rst file for a given example."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_file_rst:3
+msgid "Filename of python script"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_file_rst:5
+msgid "Absolute path to directory in documentation where examples are saved"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_file_rst:7
+msgid "Absolute path to directory where source examples are stored"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_file_rst:11
+msgid "The seen backreferences."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_file_rst:14
+msgid ""
+"* **intro** (*str*) -- The introduction of the example * **cost** "
+"(*tuple*) -- A tuple containing the ``(time, memory)`` required to run "
+"the script."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_file_rst:14
+msgid "**intro** (*str*) -- The introduction of the example"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.generate_file_rst:15
+msgid ""
+"**cost** (*tuple*) -- A tuple containing the ``(time, memory)`` required "
+"to run the script."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.handle_exception:1
+msgid "Trim and format exception, maybe raise error, etc."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.md5sum_is_current:1
+msgid "Checks whether src_file has the same md5 hash as the one on disk"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.patch_warnings:1
+msgid "Patch warnings.showwarning to actually write out the warning."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.rst_blocks:1
+msgid "Generate the rst string containing the script prose, code and output."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.rst_blocks:7
+msgid ""
+"List of strings where each element is the restructured text "
+"representation of the output of each block"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.rst_blocks:10
+#: sphinx_gallery.gen_rst.save_thumbnail:9
+msgid ""
+"File-specific settings given in source file comments as: ``# "
+"sphinx_gallery_<name> = <value>``"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.rst_blocks:16
+msgid "**out** -- rst notebook"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_rst_example:1
+msgid "Saves the rst notebook to example_file including header & footer"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_rst_example:3
+msgid "rst containing the executed file content"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_rst_example:5
+msgid "Filename with full path of python example file in documentation folder"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_rst_example:7
+msgid "Time elapsed in seconds while executing file"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_rst_example:9
+msgid "Additional memory used during the run."
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_rst_example:11
+#: sphinx_gallery.gen_rst.save_thumbnail:12
+msgid "Sphinx-Gallery configuration dictionary"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_thumbnail:1
+msgid "Generate and Save the thumbnail image"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_thumbnail:3
+msgid "holds the template where to save and how to name the image"
+msgstr ""
+
+#: of sphinx_gallery.gen_rst.save_thumbnail:5
+msgid "path to source python file"
+msgstr ""
+

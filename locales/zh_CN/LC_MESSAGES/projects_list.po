@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2022, Sphinx-gallery developers
+# This file is distributed under the same license as the Sphinx-Gallery
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Sphinx-Gallery 0.10.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 00:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../projects_list.rst:3
+msgid "Who uses Sphinx-Gallery"
+msgstr ""
+
+#: ../../projects_list.rst:5
+msgid "Here is a list of projects using `sphinx-gallery`."
+msgstr ""
+
+#: ../../projects_list.rst:7
+msgid ":ref:`Sphinx-Gallery <sphx_glr_auto_examples>`"
+msgstr ""
+
+#: ../../projects_list.rst:8
+msgid ":doc:`Scikit-learn <sklearn:auto_examples/index>`"
+msgstr ""
+
+#: ../../projects_list.rst:9
+msgid "`Nilearn <https://nilearn.github.io/auto_examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:10
+msgid ""
+"`MNE-python "
+"<https://www.martinos.org/mne/stable/auto_examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:11
+msgid "`PyStruct <https://pystruct.github.io/auto_examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:12
+msgid "`GIMLi <http://www.pygimli.org/_examples_auto/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:13
+msgid "`Nestle <https://kbarbary.github.io/nestle/examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:14
+msgid "`pyRiemann <https://pyriemann.readthedocs.io/en/latest/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:15
+msgid "`scikit-image <http://scikit-image.org/docs/dev/auto_examples/>`_"
+msgstr ""
+
+#: ../../projects_list.rst:16
+msgid ""
+"`Astropy "
+"<http://docs.astropy.org/en/stable/generated/examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:17
+msgid "`SunPy <http://docs.sunpy.org/en/stable/generated/gallery/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:18
+msgid "`PySurfer <https://pysurfer.github.io/>`_"
+msgstr ""
+
+#: ../../projects_list.rst:19
+msgid ""
+":doc:`Matplotlib <matplotlib:index>`: :doc:`Examples "
+"<matplotlib:gallery/index>` and :doc:`Tutorials "
+"<matplotlib:tutorials/index>`"
+msgstr ""
+
+#: ../../projects_list.rst:20
+msgid "`PyTorch tutorials <http://pytorch.org/tutorials>`_"
+msgstr ""
+
+#: ../../projects_list.rst:21
+msgid "`Cartopy <http://scitools.org.uk/cartopy/docs/latest/gallery/>`_"
+msgstr ""
+
+#: ../../projects_list.rst:22
+msgid "`PyVista <https://docs.pyvista.org/examples/>`_"
+msgstr ""
+
+#: ../../projects_list.rst:23
+msgid "`SimPEG <http://docs.simpeg.xyz/content/examples/>`_"
+msgstr ""
+
+#: ../../projects_list.rst:24
+msgid "`PlasmaPy <https://docs.plasmapy.org/en/latest/examples.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:25
+msgid "`Fury <http://fury.gl/latest/auto_examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:26
+msgid ""
+"`NetworkX "
+"<https://networkx.github.io/documentation/stable/auto_examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:27
+msgid "`Optuna <https://optuna.readthedocs.io/en/stable/tutorial/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:28
+msgid ""
+"`Auto-sklearn <https://automl.github.io/auto-"
+"sklearn/master/examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:29
+msgid ""
+"`OpenML-Python <https://openml.github.io/openml-"
+"python/main/examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:30
+msgid "`TorchIO <https://torchio.readthedocs.io/auto_examples/index.html>`_"
+msgstr ""
+
+#: ../../projects_list.rst:31
+msgid "`Neuraxle <https://www.neuraxle.org/stable/examples/index.html>`_"
+msgstr ""
+
