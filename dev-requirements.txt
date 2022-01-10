@@ -12,3 +12,4 @@ flake8
 check-manifest
 plotly
 memory_profiler
+sphinx_gallery
