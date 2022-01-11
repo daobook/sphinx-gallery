@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy-to-pages:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: 🛎️ Checkout
@@ -15,10 +15,10 @@ jobs:
         with:
           fetch-depth: 0  # fetch all history so that last modified date-times are accurate
 
-      - name: 🐍 Set up Python 3.8
+      - name: 🐍 Set up Python 3.10
         uses: actions/setup-python@v2
         with:
-          python-version: "3.8"
+          python-version: "3.10"
 
       - name: 🧳 Cache pip
         uses: actions/cache@v2
@@ -42,8 +42,7 @@ jobs:
       - name: 👷‍ Install dependencies
         shell: bash
         run: |
-          sudo apt-get install --fix-missing python3-numpy python3-matplotlib python3-pip python3-coverage optipng
-          python3 -m pip install --upgrade pip setuptools
+          pip install --upgrade pip setuptools
           pip install --upgrade pip
           pip install -e .
           pip install -r doc/binder/requirements.txt
