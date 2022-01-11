@@ -13,5 +13,3 @@ check-manifest
 plotly
 memory_profiler
 sphinx_gallery
-vtk
-mayavi
