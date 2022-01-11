@@ -11,5 +11,8 @@ joblib
 flake8
 check-manifest
 plotly
-memory_profiler
-
+vtk>=9.1
+plotly
+pyvista
+mayavi
+sklearn
