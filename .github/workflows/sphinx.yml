@@ -42,6 +42,8 @@ jobs:
       - name: 👷‍ Install dependencies
         shell: bash
         run: |
+          sudo apt-get install --fix-missing python3-numpy python3-matplotlib python3-pip python3-coverage optipng
+          python3 -m pip install --upgrade pip setuptools
           pip install --upgrade pip
           pip install -r dev-requirements.txt
           pip install -e .
