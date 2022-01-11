@@ -95,7 +95,7 @@ gettext_compact = False  # optional.
 exclude_patterns = ['_build']
 
 # See warnings about bad links
-nitpicky = True
+nitpicky = False
 nitpick_ignore = [('', "Pygments lexer name 'ipython' is not known")]
 
 # The reST default role (used for this markup: `text`) to use for all
@@ -121,7 +121,7 @@ highlight_language = 'python3'
 #modindex_common_prefix = []
 
 # If true, keep warnings as "system message" paragraphs in the built documents.
-#keep_warnings = False
+keep_warnings = False
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -385,9 +385,9 @@ sphinx_gallery_conf = {
     'expected_failing_examples': ['../examples/no_output/plot_raise.py',
                                   '../examples/no_output/plot_syntaxerror.py'],
     'min_reported_time': min_reported_time,
-    'binder': {'org': 'sphinx-gallery',
-               'repo': 'sphinx-gallery.github.io',
-               'branch': 'master',
+    'binder': {'org': 'daobook',
+               'repo': 'sphinx-gallery',
+               'branch': 'xin',
                'binderhub_url': 'https://mybinder.org',
                'dependencies': './binder/requirements.txt',
                'notebooks_dir': 'notebooks',
@@ -414,3 +414,9 @@ html_context = {
         ('stable', 'https://sphinx-gallery.github.io/stable'),
     )
 }
+
+# 如果你希望stderr和stdout中的每个输出都被合并成一个流，请使用以下配置。
+# 避免将 jupter 执行报错的信息输出到 cmd
+nb_merge_streams = True
+execution_allow_errors = True
+jupyter_execute_notebooks = "cache"
