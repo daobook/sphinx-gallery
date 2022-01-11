@@ -1,4 +1,4 @@
-sphinx>=1.8.3
+sphinx>=4.3
 sphinx_rtd_theme
 pytest
 pytest-coverage
@@ -12,3 +12,4 @@ flake8
 check-manifest
 plotly
 memory_profiler
+
