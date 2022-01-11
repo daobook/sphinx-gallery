@@ -11,3 +11,8 @@ joblib
 flake8
 check-manifest
 plotly
+vtk>=9.1
+plotly
+pyvista
+mayavi
+sklearn
