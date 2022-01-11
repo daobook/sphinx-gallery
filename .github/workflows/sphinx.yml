@@ -51,8 +51,8 @@ jobs:
       - name: Build HTML
         run: |
           pip install --progress-bar off --only-binary ":all:" numpy matplotlib "pyqt5!=5.15.2,!=5.15.3" "vtk<=9.0.1"
-          pip install --progress-bar off --user seaborn statsmodels sphinx_rtd_theme pillow joblib sphinx pytest "traits<6.3.0" mayavi "pyvista<0.33" memory_profiler ipython plotly
-          python setup.py develop --user
+          pip install --progress-bar off seaborn statsmodels sphinx_rtd_theme pillow joblib sphinx pytest "traits<6.3.0" mayavi "pyvista<0.33" memory_profiler ipython plotly
+          python setup.py develop
           python setup.py build_sphinx -nW --keep-going
 
       # - name: 🔧 Build HTML
