@@ -72,6 +72,8 @@ msgid ""
 "Sphinx when you build the documentation. Learn how to "
 ":ref:`set_up_your_project`"
 msgstr ""
+":ref:`create_simple_gallery` 通过自动运行 Python 文件，捕获输出+图像，并渲染成 rST 文件，"
+"当你建立文档时，为 Sphinx 准备。了解如何 :ref:`set_up_your_project`"
 
 #: ../../index.rst:27
 msgid ""
@@ -79,12 +81,16 @@ msgid ""
 "with code that generates plots in your documentation. Sphinx-Gallery also"
 " automatically generates a Jupyter Notebook for each your example page."
 msgstr ""
+":ref:`embedding_rst`：允许你在文档中交织叙述性的内容与生成情节的代码。"
+"Sphinx-Gallery 还能为你的每个例子页面自动生成 Jupyter 笔记本。"
 
 #: ../../index.rst:30
 msgid ""
 ":ref:`references_to_examples`. Sphinx-Gallery can generate mini-galleries"
 " listing all examples that use a particular function/method/etc."
 msgstr ""
+":ref:`references_to_examples`。"
+"Sphinx-Gallery 可以生成迷你画廊，列出所有使用某个特定函数/方法/等的例子。"
 
 #: ../../index.rst:32
 msgid ""
@@ -92,30 +98,36 @@ msgid ""
 "to API documentation for functions/methods/classes that are used in your "
 "examples (for any Python module that uses intersphinx)."
 msgstr ""
+":ref:`link_to_documentation`。"
+"Sphinx-Gallery 可以自动为你的例子中使用的函数/方法/类添加 API 文档的链接"
+"（对于任何使用 intersphinx 的 Python 模块）。"
 
 #: ../../index.rst:35
 msgid ""
 ":ref:`multiple_galleries_config` to create and embed galleries for "
 "several folders of examples."
 msgstr ""
+":ref:`multiple_galleries_config` 为几个文件夹的例子创建和嵌入画廊。"
 
 #: ../../../README.rst:4
 msgid "Installation"
-msgstr ""
+msgstr "安装"
 
 #: ../../../README.rst:7
 msgid "Install via ``pip``"
-msgstr ""
+msgstr "使用 ``pip`` 安装"
 
 #: ../../../README.rst:9
 msgid "You can do a direct install via pip by using:"
-msgstr ""
+msgstr "你可以通过 pip 进行直接安装，方法是使用："
 
 #: ../../../README.rst:15
 msgid ""
 "Sphinx-Gallery will not manage its dependencies when installing, thus you"
 " are required to install them manually. Our minimal dependency is:"
 msgstr ""
+"Sphinx-Gallery 在安装时不会管理它的依赖性，因此你需要手动安装它们。"
+"我们最小的依赖是："
 
 #: ../../../README.rst:19
 msgid "Sphinx >= 1.8.3"
@@ -123,7 +135,7 @@ msgstr ""
 
 #: ../../../README.rst:21
 msgid "Sphinx-Gallery has also support for packages like:"
-msgstr ""
+msgstr "Sphinx-Gallery 也支持像这样的软件包："
 
 #: ../../../README.rst:23
 msgid "Matplotlib"
@@ -143,10 +155,12 @@ msgid ""
 "recommend installing system ``optipng`` binaries to reduce the file sizes"
 " of the generated PNG files."
 msgstr ""
+"对于大部分功能，您将需要 ``pillow``。"
+"我们还建议安装系统 ``optipng`` 二进制文件以减小生成的 PNG 文件的文件大小。"
 
 #: ../../../README.rst:32
 msgid "Install as a Sphinx-Gallery developer"
-msgstr ""
+msgstr "作为 Sphinx-Gallery 开发人员安装"
 
 #: ../../../README.rst:34
 msgid ""
@@ -155,24 +169,27 @@ msgid ""
 "``setuptools`` installed in your system to install Sphinx-Gallery. For "
 "example, you can do:"
 msgstr ""
+"您可以从我们的 `Github 存储库 <https://github.com/sphinx-gallery/sphinx-gallery>`_  获取最新的开发源代码。"
+"您需要在系统中安装 ``setuptools`` 来安装 Sphinx-Gallery。例如，您可以这样做："
 
 #: ../../index.rst:45
 msgid "Citation"
-msgstr ""
+msgstr "引用"
 
 #: ../../index.rst:47
 msgid ""
 "If you would like to cite Sphinx-Gallery you can do so using our `Zenodo "
 "deposit <https://zenodo.org/record/3838216>`_."
 msgstr ""
+"如果你想引用 Sphinx-Gallery，你可以使用我们的 `Zenodo deposit <https://zenodo.org/record/3838216>`_。"
 
 #: ../../index.rst:51
 msgid "Sphinx-Gallery Show: :ref:`examples-index`"
-msgstr ""
+msgstr "Sphinx-Gallery 展示：:ref:`examples-index`"
 
 #: ../../index.rst:90
 msgid "Indices and tables"
-msgstr ""
+msgstr "索引和目录"
 
 #: ../../index.rst:92
 msgid ":ref:`genindex`"

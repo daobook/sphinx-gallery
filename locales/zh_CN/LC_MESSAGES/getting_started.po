@@ -20,17 +20,18 @@ msgstr ""
 
 #: ../../getting_started.rst:3
 msgid "Getting Started with Sphinx-Gallery"
-msgstr ""
+msgstr "开始使用 Sphinx-Gallery"
 
 #: ../../getting_started.rst:8
 msgid "Creating a basic Gallery"
-msgstr ""
+msgstr "创建一个基本的画廊"
 
 #: ../../getting_started.rst:10
 msgid ""
 "This section describes how to set up a basic gallery for your examples "
 "using the Sphinx extension Sphinx-Gallery, which will do the following:"
 msgstr ""
+"本节描述了如何使用 Sphinx 扩展 Sphinx-Gallery 为你的例子建立一个基本的画廊，它将做以下工作："
 
 #: ../../getting_started.rst:13
 msgid ""
@@ -40,6 +41,10 @@ msgid ""
 "the users with ``.ipynb`` (Jupyter notebook) and ``.py`` files of each "
 "example, which users can download."
 msgstr ""
+"从你的 ``.py`` 例子文件中自动生成 `Sphinx rST "
+"<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_。"
+"产生的 rST 的渲染将为用户提供每个例子的 ``.ipynb`` "
+"（Jupyter 笔记本）和 ``.py`` 文件，用户可以下载。"
 
 #: ../../getting_started.rst:19
 msgid ""
@@ -47,6 +52,9 @@ msgid ""
 " one that scikit-learn <http://scikit-"
 "learn.org/stable/auto_examples/index.html>`_ uses)."
 msgstr ""
+"为每个例子创建一个带有缩略图的画廊"
+"（比如 `scikit-learn "
+"<http://scikit-learn.org/stable/auto_examples/index.html>`_ 使用的那个）。"
 
 #: ../../getting_started.rst:23
 msgid ""
@@ -54,20 +62,23 @@ msgid ""
 "project>`_, with sample example galleries and basic configurations is "
 "also available to help you get started."
 msgstr ""
+"一个 `模板库 <https://github.com/sphinx-gallery/sample-project>`_，"
+"包括样本画廊和基本配置，也可以帮助你开始使用。"
 
 #: ../../getting_started.rst:30
 msgid "Overview your project files and folders"
-msgstr ""
+msgstr "概述你的项目文件和文件夹"
 
 #: ../../getting_started.rst:32
 msgid ""
 "This section describes the general files and structure needed for Sphinx-"
 "Gallery to build your examples."
 msgstr ""
+"本节描述了 Sphinx-Gallery 构建你的例子所需的一般文件和结构。"
 
 #: ../../getting_started.rst:35
 msgid "Let's say your Python project has the following structure:"
-msgstr ""
+msgstr "假设你的 Python 项目有如下结构："
 
 #: ../../getting_started.rst:53
 msgid ""
@@ -79,6 +90,11 @@ msgid ""
 "our example directory structure above) but these are unassociated with "
 "Sphinx-Gallery functions."
 msgstr ""
+"``doc`` 是 Sphinx 的 '源代码目录'。"
+"它包含了 Sphinx 的基本配置文件。"
+"这些基础文件的默认版本可以通过执行 ``sphinx-quickstart`` 获得"
+"（更多细节见 ``sphinx-quickstart <http://www.sphinx-doc.org/en/master/usage/quickstart.html>`_）。"
+"Sphinx 的 ``.rst`` 源文件一般也放在这里（我们上面的例子目录结构中没有包括），但这些与 Sphinx-Gallery 的功能无关。"
 
 #: ../../getting_started.rst:61
 msgid ""
@@ -87,28 +103,34 @@ msgid ""
 "variety of purposes outside of documenting examples for a package, for "
 "example creating a website for a Python tutorial."
 msgstr ""
+"``my_python_module`` 包含你的 Python 模块的 ``.py`` 文件。"
+"这个目录不是必须的，Sphinx-Gallery 可以用于记录包的例子之外的各种用途，"
+"例如为 Python 教程创建一个网站。"
 
 #: ../../getting_started.rst:66
 msgid ""
 "``examples`` contains the files used by Sphinx-Gallery to build the "
 "gallery."
 msgstr ""
+"``examples`` 包含 Sphinx-Gallery 用来建立画廊的文件。"
 
 #: ../../getting_started.rst:68
 msgid ""
 "Sphinx-Gallery expects the ``examples`` directory to have a specific "
 "structure, which we'll cover next."
 msgstr ""
+"Sphinx-Gallery 希望 ``examples`` 目录有一个特定的结构，我们接下来会介绍。"
 
 #: ../../getting_started.rst:72
 msgid "Structure the examples folder"
-msgstr ""
+msgstr "结构化的例子文件夹"
 
 #: ../../getting_started.rst:74
 msgid ""
 "In order for Sphinx-Gallery to build a gallery from your ``examples`` "
 "folder, this folder must have the following things:"
 msgstr ""
+"为了让 Sphinx-Gallery 从你的 ``examples`` 文件夹建立一个画廊，这个文件夹必须有以下东西："
 
 #: ../../getting_started.rst:77
 msgid ""
@@ -117,6 +139,9 @@ msgid ""
 "which will also include thumbnails generated from this folder. It must "
 "have at least a title. For example::"
 msgstr ""
+"**画廊的标题**：一个名为 ``README.txt`` 或 ``README.rst`` 的文件，"
+"其中包含 rST，作为画廊欢迎页的页眉，也包括从这个文件夹生成的缩略图。"
+"它必须至少有一个标题。例如："
 
 #: ../../getting_started.rst:87
 msgid ""
@@ -125,6 +150,8 @@ msgid ""
 "to structure these Python scripts with embedded rST, see "
 ":ref:`python_script_syntax`."
 msgstr ""
+"**例证 Python 脚本**：一个 Python 脚本的集合，当你建立你的 HTML 文档时，这些脚本将被处理。"
+"关于如何用嵌入的 rST 结构这些 Python 脚本的信息，请参见 :ref:`python_script_syntax`。"
 
 #: ../../getting_started.rst:92
 msgid ""
@@ -134,6 +161,10 @@ msgid ""
 "rich literate programming fashion, without any output. To change the "
 "default file pattern for execution and capture see :ref:`build_pattern`."
 msgstr ""
+"默认情况下，只有以 ``plot_`` 为前缀的文件才会被执行，"
+"并且它们的输出会被捕获，以纳入脚本的 HTML 输出中。"
+"没有这个前缀的文件将只被解析并以丰富的文字编程方式呈现，没有任何输出。"
+"要改变执行和捕获的默认文件模式，请参见 :ref:`build_pattern`。"
 
 #: ../../getting_started.rst:98
 msgid ""
@@ -141,6 +172,8 @@ msgid ""
 "subsequently incorporated into the built documentation can be finely "
 "tuned. See :ref:`capture_repr`."
 msgstr ""
+"在执行 ``.py`` 文件时捕获的输出，随后并入构建的文档，可以进行微调。"
+"参见 :ref:`capture_repr`。"
 
 #: ../../getting_started.rst:101
 msgid ""
@@ -148,6 +181,9 @@ msgid ""
 "be included as sub-sections of your gallery. They **must** contain their "
 "own ``README.txt`` or ``README.rst`` file as well."
 msgstr ""
+"你可以在你的 ``examples`` 目录下有子目录。"
+"这些目录将作为你的画廊的子部分被包含。"
+"它们必须包含自己的 ``README.txt`` 或 ``README.rst`` 文件。"
 
 #: ../../getting_started.rst:107
 msgid ""
@@ -155,26 +191,30 @@ msgid ""
 "example Python scripts as it is used as an internal Sphinx-Gallery "
 "variable."
 msgstr ""
+"变量名 ``___`` （3 个下划线）绝对不能用在你的 Python 脚本示例中，"
+"因为它被用作 Sphinx-Gallery 的内部变量。"
 
 #: ../../getting_started.rst:113
 msgid "Configure and use Sphinx-Gallery"
-msgstr ""
+msgstr "配置和使用 Sphinx-Gallery"
 
 #: ../../getting_started.rst:115
 msgid ""
 "After Sphinx-Gallery is installed, we must enable and configure it to "
 "build with Sphinx."
 msgstr ""
+"在 Sphinx-Gallery 安装后，我们必须启用和配置它，以便用 Sphinx 构建。"
 
 #: ../../getting_started.rst:118
 msgid "First, enable Sphinx-Gallery in the Sphinx ``doc/conf.py`` file with::"
-msgstr ""
+msgstr "首先，在 Sphinx ``doc/conf.py`` 文件中启用 Sphinx-Gallery。"
 
 #: ../../getting_started.rst:125
 msgid ""
 "This loads Sphinx-Gallery as one of your extensions, the ellipsis ``...``"
 " represents your other loaded extensions."
 msgstr ""
+"这是将 Sphinx-Gallery 作为你的扩展之一加载，省略号 ``...`` 代表你的其他加载扩展。"
 
 #: ../../getting_started.rst:128
 msgid ""
@@ -185,6 +225,11 @@ msgid ""
 "files generated. The path to both of these directories should be relative"
 " to the ``doc/conf.py`` file."
 msgstr ""
+"接下来，为 Sphinx-Gallery 创建你的配置字典。"
+"在这里我们将简单地设置最小的所需配置。"
+"我们必须设置 'examples' 目录的位置"
+"（包含 gallery 头文件和我们的 Python 脚本示例）和放置生成的输出文件的目录。"
+"这两个目录的路径应该是相对于 ``doc/conf.py`` 文件的。"
 
 #: ../../getting_started.rst:135
 msgid ""
@@ -192,12 +237,16 @@ msgid ""
 "directory (``'example_dirs'``) to be ``../examples`` and the 'output' "
 "directory (``'gallery_dirs'``) to be ``auto_examples``::"
 msgstr ""
+"以下配置声明 'examples' 目录"
+"（``'example_dirs'``）的位置为 ``../examples``，'output' 目录"
+"（``'gallery_dirs'``）为 ``auto_examples``::"
 
 #: ../../getting_started.rst:144
 msgid ""
 "After building your documentation, ``gallery_dirs`` will contain the "
 "following files and directories:"
 msgstr ""
+"在建立你的文档后，``gallery_dirs`` 将包含以下文件和目录："
 
 #: ../../getting_started.rst:147
 msgid ""
@@ -205,6 +254,8 @@ msgid ""
 " header, table of contents tree and thumbnails for each example. It will "
 "serve as the welcome page for that gallery."
 msgstr ""
+"``index.rst``：图库的主文件，包含图库标题、目录树和每个例子的缩略图。"
+"它将作为该画廊的欢迎页。"
 
 #: ../../getting_started.rst:150
 msgid ""
@@ -212,6 +263,10 @@ msgid ""
 " summarised in table format (`original pull request on GitHub "
 "<https://github.com/sphinx-gallery/sphinx-gallery/pull/348>`_)."
 msgstr ""
+"``sg_execution_times.rst`` - 所有例子 ``.py`` 文件的执行时间，"
+"以表格形式总结"
+"（`GitHub 上的原始拉动请求 "
+"<https://github.com/sphinx-gallery/sphinx-gallery/pull/348>`_）。"
 
 #: ../../getting_started.rst:153
 msgid ""
@@ -219,6 +274,8 @@ msgid ""
 " example ``.py`` files (more details in :ref:`image_scrapers`) and "
 "thumbnail images for the gallery."
 msgstr ""
+"``images`` - 目录包含在执行实例 ``.py`` 文件时产生的图像"
+"（更多细节见 :ref:`image_scrapers`）和画廊的缩略图。"
 
 #: ../../getting_started.rst:156
 msgid ""
@@ -226,28 +283,33 @@ msgid ""
 "directory will be the above and below listed files for that 'sub-"
 "gallery'."
 msgstr ""
+"为 ``'example_dirs'`` 中的每个子目录建立一个目录。"
+"在每个目录中，将有该 '子画廊' 的上列和下列文件。"
 
 #: ../../getting_started.rst:159
 msgid ""
 "Additionally for **each** ``.py`` file, a file with the following suffix "
 "is generated:"
 msgstr ""
+"另外，对于每个 ``.py`` 文件，会生成一个后缀名如下的文件："
 
 #: ../../getting_started.rst:162
 msgid ""
 "``.rst`` - the rendered rST version of the ``.py`` file, ready for Sphinx"
 " to build."
 msgstr ""
+"``.rst`` - ``.py`` 文件的渲染 rST 版本，准备让 Sphinx 构建。"
 
 #: ../../getting_started.rst:164
 msgid ""
 "``.ipynb`` - to enable the user to download a Jupyter notebook version of"
 " the example."
 msgstr ""
+"``.ipynb`` - 使用户能够下载该例子的 Jupyter 笔记本版本。"
 
 #: ../../getting_started.rst:166
 msgid "``.py`` - to enable the user to download a ``.py`` version of the example."
-msgstr ""
+msgstr "``.py`` - 使用户能够下载实例的 ``.py`` 版本。"
 
 #: ../../getting_started.rst:167
 msgid ""
@@ -255,6 +317,8 @@ msgid ""
 "changes have been made to the file and thus if new output files need to "
 "be generated."
 msgstr ""
+"``.py.md5`` - ``.py`` 文件的 md5 哈希值，"
+"用于确定是否对该文件进行了修改，从而确定是否需要生成新的输出文件。"
 
 #: ../../getting_started.rst:169
 msgid ""
@@ -262,20 +326,25 @@ msgid ""
 " they belong (more details in "
 ":ref:`sphx_glr_auto_examples_plot_6_function_identifier.py`)"
 msgstr ""
+"``_codeobj.pickle`` -- "
+"用于识别函数名称及其所属的模块"
+"（更多细节见 :ref:`sphx_glr_auto_examples_plot_6_function_identifier.py`）"
 
 #: ../../getting_started.rst:173
 msgid ""
 "Additionally, two compressed ``.zip`` files containing all the ``.ipynb``"
 " and ``.py`` files are generated."
 msgstr ""
+"此外，还生成了两个压缩的 ``.zip`` 文件，"
+"其中包含所有 ``.ipynb`` 和 ``.py`` 文件。"
 
 #: ../../getting_started.rst:176
 msgid "For more advanced configuration, see the :ref:`configuration` page."
-msgstr ""
+msgstr "关于更多的高级配置，请看 :ref:`configuration` 页面。"
 
 #: ../../getting_started.rst:179
 msgid "Add your gallery to the documentation"
-msgstr ""
+msgstr "将你的画廊添加到文件中"
 
 #: ../../getting_started.rst:181
 msgid ""
@@ -284,14 +353,16 @@ msgid ""
 "embedded in a Sphinx source ``.rst`` file with an ``.. include::`` "
 "statement."
 msgstr ""
+"为你的画廊生成的 ``index.rst`` 文件可以添加到 Sphinx 主 ``doc/index.rst`` "
+"文件的目录树中，或者用 ``.. include::`` 语句嵌入 Sphinx 源 ``.rst`` 文件中。"
 
 #: ../../getting_started.rst:186
 msgid "Build the documentation"
-msgstr ""
+msgstr "建立文档"
 
 #: ../../getting_started.rst:188
 msgid "In your Sphinx source directory, (e.g., ``myproject/doc``) execute:"
-msgstr ""
+msgstr "在你的 Sphinx 源目录下，（例如，``myproject/doc``）执行："
 
 #: ../../getting_started.rst:194
 msgid ""
@@ -301,6 +372,10 @@ msgid ""
 "outputs from your examples will be cached. In the future, only examples "
 "that have changed will be re-built."
 msgstr ""
+"这将开始构建你的完整文档。"
+"上述的 Sphinx-Gallery 输出文件和 Sphinx 构建的 HTML 文档都将被生成。"
+"一旦构建完成，你的例子的所有输出都会被缓存起来。"
+"在未来，只有那些已经改变的例子才会被重新构建。"
 
 #: ../../getting_started.rst:201
 msgid ""
@@ -308,6 +383,8 @@ msgid ""
 "advanced usage and configuration, check out the :ref:`advanced_usage` "
 "page or the :ref:`configuration` reference."
 msgstr ""
+"你现在应该有一个从你的例子脚本中建立的画廊了! "
+"对于更高级的使用和配置，请查看 :ref:`advanced_usage` 页面或 :ref:`configuration` 参考。"
 
 #: ../../getting_started.rst:206
 msgid ""
@@ -315,4 +392,6 @@ msgid ""
 ".sphinx-doc.org/en/master/man/sphinx-build.html>`_ but support for this "
 "is mostly untested and results may vary."
 msgstr ""
-
+"Sphinx-Gallery 可能适用于非 HTML 的 Sphinx `builders "
+"<https://www.sphinx-doc.org/en/master/man/sphinx-build.html>`_，"
+"但对此的支持大多未经测试，结果可能有所不同。"

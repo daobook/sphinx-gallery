@@ -20,21 +20,22 @@ msgstr ""
 
 #: ../../syntax.rst:5
 msgid "How to structure your Python scripts for Sphinx-Gallery"
-msgstr ""
+msgstr "如何为 Sphinx-Gallery 构造你的 Python 脚本"
 
 #: ../../syntax.rst:7
 msgid ""
 "This page describes the structure and syntax that can be used in Python "
 "scripts to generate rendered HTML gallery pages."
 msgstr ""
+"这个页面描述了可以在 Python 脚本中使用的结构和语法，以生成渲染的 HTML 画廊页面。"
 
 #: ../../syntax.rst:11
 msgid "A simple example"
-msgstr ""
+msgstr "简单的例子"
 
 #: ../../syntax.rst:13
 msgid "Sphinx-Gallery expects each Python file to have two things:"
-msgstr ""
+msgstr "Sphinx-Gallery 希望每个 Python 文件有两样东西："
 
 #: ../../syntax.rst:15
 msgid ""
@@ -43,6 +44,9 @@ msgid ""
 "punctuation mark but cannot start with the same punctuation mark repeated"
 " more than 3 times. For example::"
 msgstr ""
+"**一个文档字符串**，用 rST 编写，定义了例子的头。"
+"它必须以定义一个 rST 标题开始。"
+"标题可以包含任何标点符号，但不能以重复 3 次以上的相同标点符号开始。例如 ::"
 
 #: ../../syntax.rst:26
 msgid ""
@@ -53,16 +57,22 @@ msgid ""
 "(e.g., Seaborn or Yellowbrick) are saved and displayed. However, you can "
 "change this to include other packages, see :ref:`image_scrapers`."
 msgstr ""
+"**Python代码**。"
+"这可以是你希望的任何有效的 Python 代码。"
+"任何生成的 Matplotlib 图像将被保存到磁盘上，而生成的 rST 将显示这些图像和构建的例子。"
+"默认情况下，只有 Matplotlib 或基于 Matplotlib 的软件包（例如 Seaborn 或 Yellowbrick）生成的图像被保存和显示。"
+"然而，你可以改变这一点以包括其他软件包，见 :ref:`image_scrapers`。"
 
 #: ../../syntax.rst:33
 msgid ""
 "For a quick reference have a look at the example "
 ":ref:`sphx_glr_auto_examples_plot_0_sin.py`"
 msgstr ""
+"为了快速参考，请看例子 :ref:`sphx_glr_auto_examples_plot_0_sin.py`"
 
 #: ../../syntax.rst:39
 msgid "Embed rST in your example Python files"
-msgstr ""
+msgstr "在你的 Python 实例文件中嵌入 rST"
 
 #: ../../syntax.rst:41
 msgid ""
@@ -74,6 +84,10 @@ msgid ""
 "fact, Sphinx-Gallery also **creates** a Jupyter Notebook for each example"
 " that is built)."
 msgstr ""
+"此外，你可以在你的 Python 脚本中嵌入 rST 语法。"
+"rST 允许你轻松地添加格式化的文本、数学方程和参考链接，包括 :ref:`交叉引用其他例子 <cross_ref_example>`。"
+"这将与Python代码及其输出在线呈现，类似于 Jupyter 笔记本的结构"
+"（事实上，Sphinx-Gallery 也为每个构建的例子创建一个 Jupyter 笔记本）。"
 
 #: ../../syntax.rst:48
 #, python-format
