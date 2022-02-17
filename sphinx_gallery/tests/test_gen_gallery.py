@@ -165,12 +165,15 @@ def test_spaces_in_files_warn(sphinx_app_wrapper):
 
 def _check_order(sphinx_app, key):
     index_fname = os.path.join(sphinx_app.outdir, '..', 'ex', 'index.rst')
-    order = list()
+    order = []
     regex = '.*:%s=(.):.*' % key
     with codecs.open(index_fname, 'r', 'utf-8') as fid:
-        for line in fid:
-            if 'sphx-glr-thumbcontainer' in line:
-                order.append(int(re.match(regex, line).group(1)))
+        order.extend(
+            int(re.match(regex, line).group(1))
+            for line in fid
+            if 'sphx-glr-thumbcontainer' in line
+        )
+
     assert len(order) == 3
     assert order == [1, 2, 3]
 
@@ -243,17 +246,18 @@ def test_collect_gallery_files(tmpdir, gallery_conf):
     examples_path = tmpdir.join('examples')
     dirs = [examples_path.strpath]
     collected_files = set(collect_gallery_files(dirs, gallery_conf))
-    expected_files = set(
-        [ap.strpath for ap in abs_paths
-         if re.search(r'examples.*\.py$', ap.strpath)])
+    expected_files = {ap.strpath for ap in abs_paths
+             if re.search(r'examples.*\.py$', ap.strpath)}
 
     assert collected_files == expected_files
 
     tutorials_path = tmpdir.join('tutorials')
     dirs = [examples_path.strpath, tutorials_path.strpath]
     collected_files = set(collect_gallery_files(dirs, gallery_conf))
-    expected_files = set(
-        [ap.strpath for ap in abs_paths if re.search(r'.*\.py$', ap.strpath)])
+    expected_files = {
+        ap.strpath for ap in abs_paths if re.search(r'.*\.py$', ap.strpath)
+    }
+
 
     assert collected_files == expected_files
 
@@ -273,9 +277,8 @@ def test_collect_gallery_files_ignore_pattern(tmpdir, gallery_conf):
     examples_path = tmpdir.join('examples')
     dirs = [examples_path.strpath]
     collected_files = set(collect_gallery_files(dirs, gallery_conf))
-    expected_files = set(
-        [ap.strpath for ap in abs_paths
-         if re.search(r'one', os.path.basename(ap.strpath)) is None])
+    expected_files = {ap.strpath for ap in abs_paths
+             if re.search(r'one', os.path.basename(ap.strpath)) is None}
 
     assert collected_files == expected_files
 
@@ -301,9 +304,14 @@ def test_binder_copy_files(sphinx_app_wrapper, tmpdir):
     copy_binder_files(sphinx_app, None)
 
     for i_file in ['plot_1', 'plot_2', 'plot_3']:
-        assert os.path.exists(os.path.join(
-            sphinx_app.outdir, 'ntbk_folder', gallery_conf['gallery_dirs'][0],
-            i_file + '.ipynb'))
+        assert os.path.exists(
+            os.path.join(
+                sphinx_app.outdir,
+                'ntbk_folder',
+                gallery_conf['gallery_dirs'][0],
+                f'{i_file}.ipynb',
+            )
+        )
 
 
 @pytest.mark.conf_file(content="""

@@ -56,7 +56,7 @@ class NameFinder(ast.NodeVisitor):
             self.imported_names[local_name] = prefix + alias.name
 
     def visit_ImportFrom(self, node):
-        self.visit_Import(node, node.module + '.')
+        self.visit_Import(node, f'{node.module}.')
 
     def visit_Name(self, node):
         self.accessed_names.add(node.id)
@@ -76,7 +76,7 @@ class NameFinder(ast.NodeVisitor):
             self.visit(node)
 
     def get_mapping(self):
-        options = list()
+        options = []
         for name in self.accessed_names:
             local_name_split = name.split('.')
             # first pass: by global variables and object inspection (preferred)
@@ -145,7 +145,7 @@ class NameFinder(ast.NodeVisitor):
 
 def _from_import(a, b):
     imp_line = 'from %s import %s' % (a, b)
-    scope = dict()
+    scope = {}
     with warnings.catch_warnings(record=True):  # swallow warnings
         warnings.simplefilter('ignore')
         exec(imp_line, scope, scope)
@@ -213,7 +213,7 @@ def identify_names(script_blocks, global_variables=None, node=''):
     # when we find a match
     for name, full_name, class_like, is_class in names:
         if name not in example_code_obj:
-            example_code_obj[name] = list()
+            example_code_obj[name] = []
         # name is as written in file (e.g. np.asarray)
         # full_name includes resolved import path (e.g. numpy.asarray)
         splitted = full_name.rsplit('.', 1 + class_like)

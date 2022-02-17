@@ -325,12 +325,12 @@ def test_md5sums(mode, expected_md5):
         # False because is a new file
         assert not sg.md5sum_is_current(f.name)
         # Write md5sum to file to check is current
-        with open(f.name + '.md5', 'w') as file_checksum:
+        with open(f'{f.name}.md5', 'w') as file_checksum:
             file_checksum.write(file_md5)
         try:
             assert sg.md5sum_is_current(f.name, mode)
         finally:
-            os.remove(f.name + '.md5')
+            os.remove(f'{f.name}.md5')
     finally:
         os.remove(f.name)
 
@@ -403,7 +403,7 @@ def _generate_rst(gallery_conf, fname, content):
     sg.generate_file_rst(fname, gallery_conf['gallery_dir'],
                          gallery_conf['examples_dir'], gallery_conf)
     # read rst file and check if it contains code output
-    rst_fname = os.path.splitext(fname)[0] + '.rst'
+    rst_fname = f'{os.path.splitext(fname)[0]}.rst'
     with codecs.open(os.path.join(gallery_conf['gallery_dir'], rst_fname),
                      mode='r', encoding='utf-8') as f:
         rst = f.read()
@@ -425,12 +425,12 @@ plt.plot([0, 1], [0, 1])
 def _alpha_mpl_scraper(block, block_vars, gallery_conf):
     import matplotlib.pyplot as plt
     image_path_iterator = block_vars['image_path_iterator']
-    image_paths = list()
+    image_paths = []
     for fig_num, image_path in zip(plt.get_fignums(), image_path_iterator):
         fig = plt.figure(fig_num)
         assert image_path.endswith('.png')
         # use format that does not support alpha
-        image_path = image_path[:-3] + 'jpg'
+        image_path = f'{image_path[:-3]}jpg'
         fig.savefig(image_path)
         image_paths.append(image_path)
     plt.close('all')
@@ -490,7 +490,7 @@ def test_download_link_classes(gallery_conf, req_pil):
     """Test classes for download links."""
     rst = _generate_rst(gallery_conf, 'test.py', CONTENT)
     for kind in ('python', 'jupyter'):
-        assert 'sphx-glr-download sphx-glr-download-' + kind in rst
+        assert f'sphx-glr-download sphx-glr-download-{kind}' in rst
 
 
 @pytest.mark.parametrize('ext', ('.txt', '.rst', '.bad'))
@@ -516,7 +516,7 @@ def test_gen_dir_rst(gallery_conf, fakesphinxapp, ext):
 def test_pattern_matching(gallery_conf, log_collector, req_pil):
     """Test if only examples matching pattern are executed."""
     gallery_conf.update(image_scrapers=(), reset_modules=())
-    gallery_conf.update(filename_pattern=re.escape(os.sep) + 'plot_0')
+    gallery_conf.update(filename_pattern=f'{re.escape(os.sep)}plot_0')
 
     code_output = ('\n .. code-block:: none\n'
                    '\n'
@@ -529,7 +529,7 @@ def test_pattern_matching(gallery_conf, log_collector, req_pil):
     fnames = ['plot_0.py', 'plot_1.py', 'plot_2.py']
     for fname in fnames:
         rst = _generate_rst(gallery_conf, fname, CONTENT)
-        rst_fname = os.path.splitext(fname)[0] + '.rst'
+        rst_fname = f'{os.path.splitext(fname)[0]}.rst'
         if re.search(gallery_conf['filename_pattern'],
                      os.path.join(gallery_conf['gallery_dir'], rst_fname)):
             assert code_output in rst
@@ -619,14 +619,13 @@ def script_vars(tmpdir):
     fake_main = importlib.util.module_from_spec(
         importlib.util.spec_from_loader('__main__', None))
     fake_main.__dict__.update({'__doc__': ''})
-    script_vars = {
+    return {
         "execute_script": True,
         "image_path_iterator": ImagePathIterator(str(tmpdir.join("temp.png"))),
         "src_file": __file__,
         "memory_delta": [],
         "fake_main": fake_main,
     }
-    return script_vars
 
 
 def test_output_indentation(gallery_conf, script_vars):

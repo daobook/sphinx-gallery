@@ -121,9 +121,9 @@ def test_junit(sphinx_app, tmpdir):
                             'plot_numpy_matplotlib.py')
     failing_fname = op.join(new_src_dir, 'examples', 'future',
                             'plot_future_imports_broken.py')
-    shutil.move(passing_fname, passing_fname + '.temp')
+    shutil.move(passing_fname, f'{passing_fname}.temp')
     shutil.move(failing_fname, passing_fname)
-    shutil.move(passing_fname + '.temp', failing_fname)
+    shutil.move(f'{passing_fname}.temp', failing_fname)
     with docutils_namespace():
         app = Sphinx(new_src_dir, new_src_dir, new_out_dir,
                      new_toctree_dir,
@@ -578,7 +578,7 @@ def _rerun(how, src_dir, conf_dir, out_dir, toctrees_dir,
            generated_pickle_0, copied_py_0, copied_ipy_0):
     """Rerun the sphinx build and check that the right files were changed."""
     time.sleep(0.1)
-    confoverrides = dict()
+    confoverrides = {}
     if how == 'modify':
         fname = op.join(src_dir, 'examples', 'plot_numpy_matplotlib.py')
         with codecs.open(fname, 'r', 'utf-8') as fid:
@@ -586,7 +586,7 @@ def _rerun(how, src_dir, conf_dir, out_dir, toctrees_dir,
         with codecs.open(fname, 'w', 'utf-8') as fid:
             for line in lines:
                 if 'FYI this' in line:
-                    line = 'A ' + line
+                    line = f'A {line}'
                 fid.write(line)
         out_of, excluding = N_FAILING + 1, N_GOOD - 1
         n_stale = N_GOOD - 1
@@ -656,20 +656,20 @@ def _rerun(how, src_dir, conf_dir, out_dir, toctrees_dir,
     # mtimes for backrefs (gh-394)
     _assert_mtimes(generated_backrefs_0, generated_backrefs_1)
 
-    # generated RST files
-    different = ('plot_numpy_matplotlib',)
-    ignore = (
-        # this one should almost always be different, but in case we
-        # get extremely unlucky and have identical run times
-        # on the one script above that changes...
-        'sg_execution_times',
-        # this one will not change even though it was retried
-        'plot_future_imports_broken',
-        'plot_scraper_broken',
-    )
     # not reliable on Windows and one Ubuntu run
     bad = sys.platform.startswith('win') or os.getenv('BAD_MTIME', '0') == '1'
     if not bad:
+        # generated RST files
+        different = ('plot_numpy_matplotlib',)
+        ignore = (
+            # this one should almost always be different, but in case we
+            # get extremely unlucky and have identical run times
+            # on the one script above that changes...
+            'sg_execution_times',
+            # this one will not change even though it was retried
+            'plot_future_imports_broken',
+            'plot_scraper_broken',
+        )
         _assert_mtimes(generated_rst_0, generated_rst_1, different, ignore)
 
         # mtimes for pickles
@@ -692,7 +692,7 @@ def _rerun(how, src_dir, conf_dir, out_dir, toctrees_dir,
 def test_error_messages(sphinx_app, name, want):
     """Test that informative error messages are added."""
     src_dir = sphinx_app.srcdir
-    example_rst = op.join(src_dir, 'auto_examples', name + '.rst')
+    example_rst = op.join(src_dir, 'auto_examples', f'{name}.rst')
     with codecs.open(example_rst, 'r', 'utf-8') as fid:
         rst = fid.read()
     print(rst)
@@ -852,12 +852,12 @@ def test_jupyter_notebook_pandoc(sphinx_app):
     with codecs.open(fname, 'r', 'utf-8') as fid:
         md = fid.read()
 
-    md_sg = r"Use :mod:`sphinx_gallery` to link to other packages, like\n:mod:`numpy`, :mod:`matplotlib.colors`, and :mod:`matplotlib.pyplot`."  # noqa
-    md_pandoc = r'Use `sphinx_gallery`{.interpreted-text role=\"mod\"} to link to other\npackages, like `numpy`{.interpreted-text role=\"mod\"},\n`matplotlib.colors`{.interpreted-text role=\"mod\"}, and\n`matplotlib.pyplot`{.interpreted-text role=\"mod\"}.'  # noqa
-
     if any(_has_pypandoc()):
+        md_pandoc = r'Use `sphinx_gallery`{.interpreted-text role=\"mod\"} to link to other\npackages, like `numpy`{.interpreted-text role=\"mod\"},\n`matplotlib.colors`{.interpreted-text role=\"mod\"}, and\n`matplotlib.pyplot`{.interpreted-text role=\"mod\"}.'  # noqa
+
         assert md_pandoc in md
     else:
+        md_sg = r"Use :mod:`sphinx_gallery` to link to other packages, like\n:mod:`numpy`, :mod:`matplotlib.colors`, and :mod:`matplotlib.pyplot`."  # noqa
         assert md_sg in md
 
 

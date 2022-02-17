@@ -9,7 +9,7 @@ class matplotlib_format_scraper(object):
         return self.__class__.__name__
 
     def __call__(self, block, block_vars, gallery_conf):
-        kwargs = dict()
+        kwargs = {}
         if op.basename(block_vars['target_file']) == 'plot_svg.py' and \
                 gallery_conf['builder_name'] != 'latex':
             kwargs['format'] = 'svg'
@@ -45,10 +45,7 @@ class MockScrapeProblem:
 
     def __call__(self, gallery_conf, fname):
         from matplotlib.colors import colorConverter
-        if 'scraper_broken' in fname:
-            colorConverter.to_rgba = _raise
-        else:
-            colorConverter.to_rgba = self._orig
+        colorConverter.to_rgba = _raise if 'scraper_broken' in fname else self._orig
 
 
 extensions = [

@@ -27,6 +27,7 @@ colliding with another sphere.
 
 """
 
+
 import numpy as np
 
 import pyvista as pv
@@ -62,7 +63,7 @@ pl.open_gif("collision_movie.gif")
 # pl.show(auto_close=False, interactive=False)
 
 delta_x = 0.05
-for i in range(int(2/delta_x)):
+for _ in range(int(2/delta_x)):
     sphere1.translate([delta_x, 0, 0])
     col, n_contacts = sphere0.collision(sphere1)
 
@@ -71,8 +72,5 @@ for i in range(int(2/delta_x)):
         collision_mask[col['ContactCells']] = True
     sphere0['collisions'] = collision_mask
     pl.write_frame()
-
-    # alternatively, disable movie plotting and simply render the image
-    # pl.render()
 
 pl.close()

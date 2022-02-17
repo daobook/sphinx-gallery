@@ -5,6 +5,7 @@
 Installer Sphinx extension for gallery generator
 """
 
+
 import codecs
 import os
 from setuptools import setup, find_packages
@@ -16,15 +17,18 @@ with codecs.open('README.rst', mode='r', encoding='utf-8') as f:
 
 description, in_ = '', False
 for line in long_description.splitlines():
-    if not in_:
-        if len(line) and not line.startswith(('.', '=', ' ')) and \
-                line != 'Sphinx-Gallery':
-            in_ = True
+    if (
+        not in_
+        and len(line)
+        and not line.startswith(('.', '=', ' '))
+        and line != 'Sphinx-Gallery'
+    ):
+        in_ = True
     if in_:
         if len(line) == 0:
             break
         else:
-            description += line + ' '
+            description += f'{line} '
 description = description.strip()
 
 # Get the requirements from requirements.txt and environment

@@ -34,31 +34,30 @@ logger = sphinx_compatibility.getLogger('sphinx-gallery')
 def jupyter_notebook_skeleton():
     """Returns a dictionary with the elements of a Jupyter notebook"""
     py_version = sys.version_info
-    notebook_skeleton = {
+    return {
         "cells": [],
         "metadata": {
             "kernelspec": {
-                "display_name": "Python " + str(py_version[0]),
+                "display_name": f'Python {str(py_version[0])}',
                 "language": "python",
-                "name": "python" + str(py_version[0])
+                "name": f'python{str(py_version[0])}',
             },
             "language_info": {
                 "codemirror_mode": {
                     "name": "ipython",
-                    "version": py_version[0]
+                    "version": py_version[0],
                 },
                 "file_extension": ".py",
                 "mimetype": "text/x-python",
                 "name": "python",
                 "nbconvert_exporter": "python",
-                "pygments_lexer": "ipython" + str(py_version[0]),
-                "version": '{0}.{1}.{2}'.format(*sys.version_info[:3])
-            }
+                "pygments_lexer": f'ipython{str(py_version[0])}',
+                "version": '{0}.{1}.{2}'.format(*sys.version_info[:3]),
+            },
         },
         "nbformat": 4,
-        "nbformat_minor": 0
+        "nbformat_minor": 0,
     }
-    return notebook_skeleton
 
 
 def directive_fun(match, directive):

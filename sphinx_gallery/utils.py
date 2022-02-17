@@ -47,11 +47,7 @@ def scale_image(in_fname, out_fname, max_width, max_height):
     scale_w = max_width / float(width_in)
     scale_h = max_height / float(height_in)
 
-    if height_in * scale_w <= max_height:
-        scale = scale_w
-    else:
-        scale = scale_h
-
+    scale = scale_w if height_in * scale_w <= max_height else scale_h
     if scale >= 1.0 and in_fname == out_fname:
         return
 
@@ -136,7 +132,7 @@ def get_md5sum(src_file, mode='b'):
         are used to ensure consitency in hashes between platforms.
     """
     errors = 'surrogateescape' if mode == 't' else None
-    with open(src_file, 'r' + mode, errors=errors) as src_data:
+    with open(src_file, f'r{mode}', errors=errors) as src_data:
         src_content = src_data.read()
         if mode == 't':
             src_content = src_content.encode(errors=errors)
@@ -152,11 +148,10 @@ def _replace_md5(fname_new, fname_old=None, method='move', mode='b'):
                                       get_md5sum(fname_new, mode)):
         if method == 'move':
             os.remove(fname_new)
+    elif method == 'move':
+        move(fname_new, fname_old)
     else:
-        if method == 'move':
-            move(fname_new, fname_old)
-        else:
-            copyfile(fname_new, fname_old)
+        copyfile(fname_new, fname_old)
     assert os.path.isfile(fname_old)
 
 

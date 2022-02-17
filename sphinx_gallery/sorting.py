@@ -41,8 +41,7 @@ class ExplicitOrder(object):
                               "tuple or Generator, which hold"
                               "the paths of each gallery subfolder")
 
-        self.ordered_list = list(os.path.normpath(path)
-                                 for path in ordered_list)
+        self.ordered_list = [os.path.normpath(path) for path in ordered_list]
 
     def __call__(self, item):
         if item in self.ordered_list:
@@ -78,10 +77,8 @@ class NumberOfCodeLinesSortKey(_SortKey):
     def __call__(self, filename):
         src_file = os.path.normpath(os.path.join(self.src_dir, filename))
         file_conf, script_blocks = split_code_and_text_blocks(src_file)
-        amount_of_code = sum([len(bcontent)
-                              for blabel, bcontent, lineno in script_blocks
-                              if blabel == 'code'])
-        return amount_of_code
+        return sum(len(bcontent) for blabel, bcontent, lineno in script_blocks
+                                  if blabel == 'code')
 
 
 class FileSizeSortKey(_SortKey):

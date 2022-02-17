@@ -191,17 +191,17 @@ def _sanitize_rst(string):
     """Use regex to remove at least some sphinx directives."""
     # :class:`a.b.c <thing here>`, :ref:`abc <thing here>` --> thing here
     p, e = r'(\s|^):[^:\s]+:`', r'`(\W|$)'
-    string = re.sub(p + r'\S+\s*<([^>`]+)>' + e, r'\1\2\3', string)
+    string = re.sub(f'{p}\\S+\\s*<([^>`]+)>{e}', r'\1\2\3', string)
     # :class:`~a.b.c` --> c
-    string = re.sub(p + r'~([^`]+)' + e, _regroup, string)
+    string = re.sub(f'{p}~([^`]+){e}', _regroup, string)
     # :class:`a.b.c` --> a.b.c
-    string = re.sub(p + r'([^`]+)' + e, r'\1\2\3', string)
+    string = re.sub(f'{p}([^`]+){e}', r'\1\2\3', string)
 
     # ``whatever thing`` --> whatever thing
     p = r'(\s|^)`'
-    string = re.sub(p + r'`([^`]+)`' + e, r'\1\2\3', string)
+    string = re.sub(f'{p}`([^`]+)`{e}', r'\1\2\3', string)
     # `whatever thing` --> whatever thing
-    string = re.sub(p + r'([^`]+)' + e, r'\1\2\3', string)
+    string = re.sub(f'{p}([^`]+){e}', r'\1\2\3', string)
     return string
 
 
@@ -212,7 +212,7 @@ def extract_intro_and_title(filename, docstring):
     # remove comments and other syntax like `.. _link:`
     paragraphs = [p for p in paragraphs
                   if not p.startswith('.. ') and len(p) > 0]
-    if len(paragraphs) == 0:
+    if not paragraphs:
         raise ExtensionError(
             "Example docstring should have a header for the example title. "
             "Please check the example file:\n {}\n".format(filename))
@@ -235,7 +235,7 @@ def extract_intro_and_title(filename, docstring):
     intro = re.sub('\n', ' ', intro_paragraph)
     intro = _sanitize_rst(intro)
     if len(intro) > 95:
-        intro = intro[:95] + '...'
+        intro = f'{intro[:95]}...'
     return intro, title
 
 
@@ -244,7 +244,7 @@ def md5sum_is_current(src_file, mode='b'):
 
     src_md5 = get_md5sum(src_file, mode)
 
-    src_md5_file = src_file + '.md5'
+    src_md5_file = f'{src_file}.md5'
     if os.path.exists(src_md5_file):
         with open(src_md5_file, 'r') as file_checksum:
             ref_md5 = file_checksum.read()
@@ -425,10 +425,12 @@ def handle_exception(exc_info, src_file, script_vars, gallery_conf):
     root = os.path.dirname(__file__) + os.sep
     for ii, s in enumerate(stack, 1):
         # Trim our internal stack
-        if s.filename.startswith(root + 'gen_gallery.py') and \
-                s.name == 'call_memory':
+        if (
+            s.filename.startswith(f'{root}gen_gallery.py')
+            and s.name == 'call_memory'
+        ):
             start = max(ii, start)
-        elif s.filename.startswith(root + 'gen_rst.py'):
+        elif s.filename.startswith(f'{root}gen_rst.py'):
             # SyntaxError
             if s.name == 'execute_code_block' and ('compile(' in s.line or
                                                    'save_figures' in s.line):
@@ -445,8 +447,7 @@ def handle_exception(exc_info, src_file, script_vars, gallery_conf):
         traceback.format_list(stack) +
         traceback.format_exception_only(etype, exc))
 
-    expected = src_file in _expected_failing_examples(gallery_conf)
-    if expected:
+    if expected := src_file in _expected_failing_examples(gallery_conf):
         func, color = logger.info, 'blue',
     else:
         func, color = logger.warning, 'red'
@@ -471,10 +472,10 @@ def handle_exception(exc_info, src_file, script_vars, gallery_conf):
 def _showwarning(message, category, filename, lineno, file=None, line=None):
     if file is None:
         file = sys.stderr
-        if file is None:
-            # sys.stderr is None when run with pythonw.exe:
-            # warnings get lost
-            return
+    if file is None:
+        # sys.stderr is None when run with pythonw.exe:
+        # warnings get lost
+        return
     text = warnings.formatwarning(message, category, filename, lineno, line)
     try:
         file.write(text)
@@ -523,10 +524,7 @@ def _get_memory_base(gallery_conf):
         return 0.
     # There might be a cleaner way to do this at some point
     from memory_profiler import memory_usage
-    if sys.platform in ('win32', 'darwin'):
-        sleep, timeout = (1, 2)
-    else:
-        sleep, timeout = (0.5, 1)
+    sleep, timeout = (1, 2) if sys.platform in ('win32', 'darwin') else (0.5, 1)
     proc = subprocess.Popen(
         [sys.executable, '-c',
             'import time, sys; time.sleep(%s); sys.exit(0)' % sleep],
@@ -536,18 +534,17 @@ def _get_memory_base(gallery_conf):
     proc.communicate(**kwargs)
     # On OSX sometimes the last entry can be None
     memories = [mem for mem in memories if mem is not None] + [0.]
-    memory_base = max(memories)
-    return memory_base
+    return max(memories)
 
 
 def _ast_module():
     """Get ast.Module function, dealing with:
     https://bugs.python.org/issue35894"""
-    if sys.version_info >= (3, 8):
-        ast_Module = partial(ast.Module, type_ignores=[])
-    else:
-        ast_Module = ast.Module
-    return ast_Module
+    return (
+        partial(ast.Module, type_ignores=[])
+        if sys.version_info >= (3, 8)
+        else ast.Module
+    )
 
 
 def _check_reset_logging_tee(src_file):
@@ -646,10 +643,9 @@ def _get_code_output(is_last_expr, example_globals, gallery_conf, logging_tee,
     else:
         captured_html = ''
 
-    code_output = u"\n{0}\n\n{1}\n{2}\n\n".format(
+    return u"\n{0}\n\n{1}\n{2}\n\n".format(
         images_rst, captured_std, captured_html
     )
-    return code_output
 
 
 def _reset_cwd_syspath(cwd, sys_path):
@@ -778,9 +774,8 @@ def executable_script(src_file, gallery_conf):
     """
 
     filename_pattern = gallery_conf.get('filename_pattern')
-    execute = re.search(filename_pattern, src_file) and gallery_conf[
+    return re.search(filename_pattern, src_file) and gallery_conf[
         'plot_gallery']
-    return execute
 
 
 def _check_input(prompt=None):
@@ -852,7 +847,7 @@ def execute_script(script_blocks, script_vars, gallery_conf, file_conf):
     # include at least one entry to avoid max() ever failing
     script_vars['memory_delta'] = [memory_start]
     script_vars['fake_main'] = fake_main
-    output_blocks = list()
+    output_blocks = []
     with _LoggingTee(script_vars.get('src_file', '')) as logging_tee:
         for block in script_blocks:
             logging_tee.set_std_and_reset_position()
@@ -924,7 +919,7 @@ def generate_file_rst(fname, target_dir, src_dir, gallery_conf,
         os.makedirs(image_dir)
 
     base_image_name = os.path.splitext(fname)[0]
-    image_fname = 'sphx_glr_' + base_image_name + '_{0:03}.png'
+    image_fname = f'sphx_glr_{base_image_name}' + '_{0:03}.png'
     image_path_template = os.path.join(image_dir, image_fname)
 
     script_vars = {
@@ -984,7 +979,7 @@ def generate_file_rst(fname, target_dir, src_dir, gallery_conf,
                    gallery_conf)
 
     example_nb = jupyter_notebook(script_blocks, gallery_conf, target_dir)
-    ipy_fname = replace_py_ipynb(target_file) + '.new'
+    ipy_fname = f'{replace_py_ipynb(target_file)}.new'
     save_notebook(example_nb, ipy_fname)
     _replace_md5(ipy_fname, mode='t')
 
@@ -995,14 +990,17 @@ def generate_file_rst(fname, target_dir, src_dir, gallery_conf,
         global_variables = None
     example_code_obj = identify_names(script_blocks, global_variables, node)
     if example_code_obj:
-        codeobj_fname = target_file[:-3] + '_codeobj.pickle.new'
+        codeobj_fname = f'{target_file[:-3]}_codeobj.pickle.new'
         with open(codeobj_fname, 'wb') as fid:
             pickle.dump(example_code_obj, fid, pickle.HIGHEST_PROTOCOL)
         _replace_md5(codeobj_fname)
-    backrefs = set('{module_short}.{name}'.format(**cobj)
-                   for cobjs in example_code_obj.values()
-                   for cobj in cobjs
-                   if cobj['module'].startswith(gallery_conf['doc_module']))
+    backrefs = {
+        '{module_short}.{name}'.format(**cobj)
+        for cobjs in example_code_obj.values()
+        for cobj in cobjs
+        if cobj['module'].startswith(gallery_conf['doc_module'])
+    }
+
     # Write backreferences
     _write_backreferences(backrefs, seen_backrefs, gallery_conf, target_dir,
                           fname, intro, title)

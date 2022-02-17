@@ -33,8 +33,7 @@ def _app_get_logger(name):
 
         def warning(self, msg, *args, **kwargs):
             msg = msg % args
-            colorfunc = self._color_to_func(kwargs)
-            if colorfunc:
+            if colorfunc := self._color_to_func(kwargs):
                 # colorfunc is a valid kwarg in 1.5, but not older, so we just
                 # apply it ourselves.
                 msg = colorfunc(msg)
@@ -42,8 +41,7 @@ def _app_get_logger(name):
 
         def info(self, msg='', *args, **kwargs):
             msg = msg % args
-            colorfunc = self._color_to_func(kwargs)
-            if colorfunc:
+            if colorfunc := self._color_to_func(kwargs):
                 msg = colorfunc(msg)
             return _app.info(msg, **kwargs)
 
@@ -63,8 +61,7 @@ def _app_status_iterator(iterable, summary, **kwargs):
     if color is not None:
         kwargs['colorfunc'] = getattr(sphinx.util.console, color)
 
-    for item in _app.status_iterator(iterable, summary, **kwargs):
-        yield item
+    yield from _app.status_iterator(iterable, summary, **kwargs)
 
 
 getLogger = sphinx.util.logging.getLogger

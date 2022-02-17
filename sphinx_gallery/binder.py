@@ -121,14 +121,13 @@ def gen_binder_rst(fpath, binder_conf, gallery_conf):
         shutil.copyfile(
             os.path.join(glr_path_static(), 'binder_badge_logo.svg'),
             physical_path)
-    rst = (
+    return (
         "\n"
         "  .. container:: binder-badge\n\n"
         "    .. image:: images/binder_badge_logo.svg\n"
         "      :target: {}\n"
         "      :alt: Launch binder\n"
         "      :width: 150 px\n").format(binder_url)
-    return rst
 
 
 def copy_binder_files(app, exception):
@@ -142,7 +141,7 @@ def copy_binder_files(app, exception):
     gallery_conf = app.config.sphinx_gallery_conf
     binder_conf = gallery_conf['binder']
 
-    if not len(binder_conf) > 0:
+    if len(binder_conf) <= 0:
         return
 
     logger.info('copying binder requirements...', color='white')
@@ -179,10 +178,7 @@ def _remove_ipynb_files(path, contents):
         if entry.endswith('.ipynb'):
             # Don't include ipynb files
             pass
-        elif (entry != "images") and os.path.isdir(os.path.join(path, entry)):
-            # Don't include folders not called "images"
-            pass
-        else:
+        elif entry == "images" or not os.path.isdir(os.path.join(path, entry)):
             # Keep everything else
             contents_return.append(entry)
     return contents_return
@@ -225,12 +221,9 @@ def check_binder_conf(binder_conf):
     # Ensure all fields are populated
     req_values = ['binderhub_url', 'org', 'repo', 'branch', 'dependencies']
     optional_values = ['filepath_prefix', 'notebooks_dir', 'use_jupyter_lab']
-    missing_values = []
-    for val in req_values:
-        if binder_conf.get(val) is None:
-            missing_values.append(val)
-
-    if len(missing_values) > 0:
+    if missing_values := [
+        val for val in req_values if binder_conf.get(val) is None
+    ]:
         raise ConfigError('binder_conf is missing values for: {}'.format(
             missing_values))
 
@@ -259,7 +252,7 @@ def check_binder_conf(binder_conf):
     binder_conf['notebooks_dir'] = binder_conf.get('notebooks_dir',
                                                    'notebooks')
     path_reqs_filenames = [os.path.basename(ii) for ii in path_reqs]
-    if not any(ii in path_reqs_filenames for ii in required_reqs_files):
+    if all(ii not in path_reqs_filenames for ii in required_reqs_files):
         raise ConfigError(
             'Did not find one of `requirements.txt` or `environment.yml` '
             'in the "dependencies" section of the binder configuration '

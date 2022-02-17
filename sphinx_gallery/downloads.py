@@ -68,8 +68,8 @@ def python_zip(file_list, gallery_path, extension='.py'):
     """
     zipname = os.path.basename(os.path.normpath(gallery_path))
     zipname += '_python' if extension == '.py' else '_jupyter'
-    zipname = os.path.join(gallery_path, zipname + '.zip')
-    zipname_new = zipname + '.new'
+    zipname = os.path.join(gallery_path, f'{zipname}.zip')
+    zipname_new = f'{zipname}.new'
     with zipfile.ZipFile(zipname_new, mode='w') as zipf:
         for fname in file_list:
             file_src = os.path.splitext(fname)[0] + extension

@@ -70,12 +70,8 @@ def _matplotlib_fig_titles(fig):
     # get titles from all axes, for all locs
     title_locs = ['left', 'center', 'right']
     for ax in fig.axes:
-        for loc in title_locs:
-            text = ax.get_title(loc=loc)
-            if text:
-                titles.append(text)
-    fig_titles = ', '.join(titles)
-    return fig_titles
+        titles.extend(text for loc in title_locs if (text := ax.get_title(loc=loc)))
+    return ', '.join(titles)
 
 
 _ANIMATION_RST = '''
@@ -122,20 +118,21 @@ def matplotlib_scraper(block, block_vars, gallery_conf, **kwargs):
         if (len(st) > 0) and (st[-1] == 'x'):
             # "2x" = "2.0"
             srcset_mult_facs += [float(st[:-1])]
-        elif st == "":
-            pass
-        else:
+        elif st != "":
             raise ExtensionError(
                 f'Invalid value for image_srcset parameter: "{st}". '
                 'Must be a list of strings with the multiplicative '
                 'factor followed by an "x".  e.g. ["2.0x", "1.5x"]')
 
     # Check for animations
-    anims = list()
+    anims = []
     if gallery_conf.get('matplotlib_animations', False):
-        for ani in block_vars['example_globals'].values():
-            if isinstance(ani, Animation):
-                anims.append(ani)
+        anims.extend(
+            ani
+            for ani in block_vars['example_globals'].values()
+            if isinstance(ani, Animation)
+        )
+
     # Then standard images
     for fig_num, image_path in zip(plt.get_fignums(), image_path_iterator):
         image_path = PurePosixPath(image_path)
@@ -161,8 +158,8 @@ def matplotlib_scraper(block, block_vars, gallery_conf, **kwargs):
         # "kwargs" for subsequent figures processed by the loop
         these_kwargs = kwargs.copy()
         for attr in ['facecolor', 'edgecolor']:
-            fig_attr = getattr(fig, 'get_' + attr)()
-            default_attr = matplotlib.rcParams['figure.' + attr]
+            fig_attr = getattr(fig, f'get_{attr}')()
+            default_attr = matplotlib.rcParams[f'figure.{attr}']
             if to_rgba(fig_attr) != to_rgba(default_attr) and \
                     attr not in kwargs:
                 these_kwargs[attr] = fig_attr
@@ -178,7 +175,7 @@ def matplotlib_scraper(block, block_vars, gallery_conf, **kwargs):
 
             # save other srcset paths, keyed by multiplication factor:
             for mult in srcset_mult_facs:
-                if not (mult == 1):
+                if mult != 1:
                     multst = f'{mult}'.replace('.', '_')
                     name = f"{image_path.stem}_{multst}x{image_path.suffix}"
                     hipath = image_path.parent / PurePosixPath(name)
@@ -261,7 +258,7 @@ def mayavi_scraper(block, block_vars, gallery_conf):
     """
     from mayavi import mlab
     image_path_iterator = block_vars['image_path_iterator']
-    image_paths = list()
+    image_paths = []
     e = mlab.get_engine()
     for scene, image_path in zip(e.scenes, image_path_iterator):
         try:
@@ -295,7 +292,7 @@ class ImagePathIterator(object):
 
     def __init__(self, image_path):
         self.image_path = image_path
-        self.paths = list()
+        self.paths = []
         self._stop = 1000000
 
     def __len__(self):
@@ -323,11 +320,9 @@ class ImagePathIterator(object):
         Where ``epoch`` is given by successive outputs of
         :func:`mne.Epochs.next`.
         """
-        # we should really never have 1e6, let's prevent some user pain
-        for ii in range(self._stop):
+        for _ in range(self._stop):
             yield self.next()
-        else:
-            raise ExtensionError('Generated over %s images' % (self._stop,))
+        raise ExtensionError('Generated over %s images' % (self._stop,))
 
     def next(self):
         return self.__next__()
@@ -485,11 +480,8 @@ def _get_srcset_st(sources_dir, hinames):
     for k in hinames.keys():
         path = os.path.relpath(hinames[k],
                                sources_dir).replace(os.sep, '/').lstrip('/')
-        srcst += '/' + path
-        if k == 0:
-            srcst += ', '
-        else:
-            srcst += f' {k:1.1f}x, '
+        srcst += f'/{path}'
+        srcst += ', ' if k == 0 else f' {k:1.1f}x, '
     if srcst[-2:] == ', ':
         srcst = srcst[:-2]
     srcst += ''

@@ -221,7 +221,7 @@ def test_custom_scraper(gallery_conf, monkeypatch):
 @pytest.mark.parametrize('ext', _KNOWN_IMG_EXTS)
 def test_figure_rst(ext):
     """Testing rst of images"""
-    figure_list = ['sphx_glr_plot_1.' + ext]
+    figure_list = [f'sphx_glr_plot_1.{ext}']
     image_rst = figure_rst(figure_list, '.')
     single_image = f"""
 .. image-sg:: /sphx_glr_plot_1.{ext}
@@ -231,7 +231,7 @@ def test_figure_rst(ext):
 """
     assert image_rst == single_image
 
-    image_rst = figure_rst(figure_list + ['second.' + ext], '.')
+    image_rst = figure_rst(figure_list + [f'second.{ext}'], '.')
 
     image_list_rst = f"""
 .. rst-class:: sphx-glr-horizontal
@@ -254,17 +254,17 @@ def test_figure_rst(ext):
     assert image_rst == image_list_rst
 
     # test issue #229
-    local_img = [os.path.join(os.getcwd(), 'third.' + ext)]
+    local_img = [os.path.join(os.getcwd(), f'third.{ext}')]
     image_rst = figure_rst(local_img, '.')
 
-    single_image = SG_IMAGE % ("third." + ext, '', "/third." + ext)
+    single_image = SG_IMAGE % (f'third.{ext}', '', f'/third.{ext}')
     assert image_rst == single_image
 
 
 @pytest.mark.parametrize('ext', ['png'])
 def test_figure_rst_srcset(ext):
     """Testing rst of images"""
-    figure_list = ['sphx_glr_plot_1.' + ext]
+    figure_list = [f'sphx_glr_plot_1.{ext}']
     hipaths = [{0: 'sphx_glr_plot_1.png', 2.0: 'sphx_glr_plot_1_2_0.png'}]
     image_rst = figure_rst(figure_list, '.', srcsetpaths=hipaths)
     single_image = f"""
@@ -276,8 +276,10 @@ def test_figure_rst_srcset(ext):
     assert image_rst == single_image
 
     hipaths += [{0: 'second.png', 2.0: 'second_2_0.png'}]
-    image_rst = figure_rst(figure_list + ['second.' + ext], '.',
-                           srcsetpaths=hipaths+[])
+    image_rst = figure_rst(
+        figure_list + [f'second.{ext}'], '.', srcsetpaths=hipaths + []
+    )
+
 
     image_list_rst = f"""
 .. rst-class:: sphx-glr-horizontal
@@ -300,10 +302,10 @@ def test_figure_rst_srcset(ext):
     assert image_rst == image_list_rst
 
     # test issue #229
-    local_img = [os.path.join(os.getcwd(), 'third.' + ext)]
+    local_img = [os.path.join(os.getcwd(), f'third.{ext}')]
     image_rst = figure_rst(local_img, '.')
 
-    single_image = SG_IMAGE % ("third." + ext, '', "/third." + ext)
+    single_image = SG_IMAGE % (f'third.{ext}', '', f'/third.{ext}')
     assert image_rst == single_image
 
 

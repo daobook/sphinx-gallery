@@ -212,10 +212,7 @@ def visit_imgsg_html(self, node):
         # ../../_images/plot_1_2_0x.png
         relpath = imagerel+nm
         srcsetst += f'{relpath}'
-        if mult == 0:
-            srcsetst += ', '
-        else:
-            srcsetst += f' {mult:1.1f}x, '
+        srcsetst += ', ' if mult == 0 else f' {mult:1.1f}x, '
     # trim trailing comma and space...
     srcsetst = srcsetst[:-2]
 

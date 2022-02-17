@@ -49,7 +49,7 @@ class DefaultResetArgv:
 
 
 DEFAULT_GALLERY_CONF = {
-    'filename_pattern': re.escape(os.sep) + 'plot',
+    'filename_pattern': f'{re.escape(os.sep)}plot',
     'ignore_pattern': r'__init__\.py',
     'examples_dirs': os.path.join('..', 'examples'),
     'reset_argv': DefaultResetArgv(),
@@ -61,21 +61,16 @@ DEFAULT_GALLERY_CONF = {
     'reference_url': {},
     'capture_repr': ('_repr_html_', '__repr__'),
     'ignore_repr_types': r'',
-    # Build options
-    # -------------
-    # 'plot_gallery' also accepts strings that evaluate to a bool, e.g. "True",
-    # "False", "1", "0" so that they can be easily set via command line
-    # switches of sphinx-build
     'plot_gallery': True,
     'download_all_examples': True,
     'abort_on_example_error': False,
     'only_warn_on_example_error': False,
     'failing_examples': {},
     'passing_examples': [],
-    'stale_examples': [],  # ones that did not need to be run due to md5sum
+    'stale_examples': [],
     'run_stale_examples': False,
     'expected_failing_examples': set(),
-    'thumbnail_size': (400, 280),  # Default CSS does 0.4 scaling (160, 112)
+    'thumbnail_size': (400, 280),
     'min_reported_time': 0,
     'binder': {},
     'image_scrapers': ('matplotlib',),
@@ -98,6 +93,7 @@ DEFAULT_GALLERY_CONF = {
     'default_thumb_file': None,
     'line_numbers': False,
 }
+
 
 logger = sphinx_compatibility.getLogger('sphinx-gallery')
 
@@ -489,7 +485,7 @@ def generate_gallery_rst(app):
             else:
                 t_float = float(t.split()[0])
                 if t_float >= gallery_conf['min_reported_time']:
-                    text += t.rjust(lens[1]) + '   ' + m.rjust(lens[2])
+                    text += f'{t.rjust(lens[1])}   {m.rjust(lens[2])}'
                     logger.info(text)
         # Also create a junit.xml file, useful e.g. on CircleCI
         write_junit_xml(gallery_conf, app.builder.outdir, costs)
@@ -525,7 +521,7 @@ def cost_name_key(cost_name):
 
 
 def _format_for_writing(costs, path, kind='rst'):
-    lines = list()
+    lines = []
     for cost in sorted(costs, key=cost_name_key):
         if kind == 'rst':  # like in sg_execution_times
             name = ':ref:`sphx_glr_{0}_{1}` (``{1}``)'.format(
@@ -642,9 +638,10 @@ def touch_empty_backreferences(app, what, name, obj, options, lines):
 
 
 def _expected_failing_examples(gallery_conf):
-    return set(
+    return {
         os.path.normpath(os.path.join(gallery_conf['src_dir'], path))
-        for path in gallery_conf['expected_failing_examples'])
+        for path in gallery_conf['expected_failing_examples']
+    }
 
 
 def _parse_failures(gallery_conf):
@@ -693,11 +690,9 @@ def summarize_failing_examples(app, exception):
     fail_msgs = []
     if failing_unexpectedly:
         fail_msgs.append(red("Unexpected failing examples:"))
-        for fail_example in failing_unexpectedly:
-            fail_msgs.append(fail_example + ' failed leaving traceback:\n' +
+        fail_msgs.extend(fail_example + ' failed leaving traceback:\n' +
                              gallery_conf['failing_examples'][fail_example] +
-                             '\n')
-
+                             '\n' for fail_example in failing_unexpectedly)
     if passing_unexpectedly:
         fail_msgs.append(red("Examples expected to fail, but not failing:\n") +
                          "Please remove these examples from\n" +
@@ -737,11 +732,13 @@ def collect_gallery_files(examples_dirs, gallery_conf):
     files = []
     for example_dir in examples_dirs:
         for root, dirnames, filenames in os.walk(example_dir):
-            for filename in filenames:
-                if filename.endswith('.py'):
-                    if re.search(gallery_conf['ignore_pattern'],
-                                 filename) is None:
-                        files.append(os.path.join(root, filename))
+            files.extend(
+                os.path.join(root, filename)
+                for filename in filenames
+                if filename.endswith('.py')
+                and re.search(gallery_conf['ignore_pattern'], filename) is None
+            )
+
     return files
 
 
@@ -749,7 +746,7 @@ def check_duplicate_filenames(files):
     """Check for duplicate filenames across gallery directories."""
     # Check whether we'll have duplicates
     used_names = set()
-    dup_names = list()
+    dup_names = []
 
     for this_file in files:
         this_fname = os.path.basename(this_file)
@@ -758,7 +755,7 @@ def check_duplicate_filenames(files):
         else:
             used_names.add(this_fname)
 
-    if len(dup_names) > 0:
+    if dup_names:
         logger.warning(
             'Duplicate example file name(s) found. Having duplicate file '
             'names will break some links. '
@@ -768,8 +765,7 @@ def check_duplicate_filenames(files):
 def check_spaces_in_filenames(files):
     """Check for spaces in filenames across example directories."""
     regex = re.compile(r'[\s]')
-    files_with_space = list(filter(regex.search, files))
-    if files_with_space:
+    if files_with_space := list(filter(regex.search, files)):
         logger.warning(
             'Example file name(s) with space(s) found. Having space(s) in '
             'file names will break some links. '
@@ -803,10 +799,9 @@ def setup(app):
     app.connect('build-finished', copy_binder_files)
     app.connect('build-finished', summarize_failing_examples)
     app.connect('build-finished', embed_code_links)
-    metadata = {'parallel_read_safe': True,
+    return {'parallel_read_safe': True,
                 'parallel_write_safe': True,
                 'version': _sg_version}
-    return metadata
 
 
 def setup_module():
